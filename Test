@@ -19,9 +19,6 @@ local Section4 = Tab2:CreateSection("Background")
 local Toggle1 = Section1:CreateToggle("AutoUnstore", nil, function(State)
     if state then
 loadstring(game:HttpGet("https://pastebin.com/raw/gAWBpDRS"))()
-        else
-loadstring(game:HttpGet("https://pastebin.com/raw/UAJq1qys"))()
-        end 
 end) 
 local Slider2 = Section1:CreateSlider("Slider Radius", 0,1000,nil,false, function(Value) 
     getgenv().AimBot.FOV = Value 

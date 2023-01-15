@@ -1,5 +1,5 @@
 local Config = {
-    WindowName = " HUB -- [Fam]",
+    WindowName = " HUB -- []",
     Color = Color3.fromRGB(0,183,255),
     Keybind = Enum.KeyCode.RightControl
 }
@@ -24,12 +24,10 @@ local Section4 = Tab2:CreateSection("Background")
 
 local Label1 = Section1:CreateLabel("Label 1")
 Label1:UpdateText("lol")
--------------
 local Button1 = Section1:CreateButton("Button 1", function()
     print("Click Button 1")
 end)
 Button1:AddToolTip("Button 1 ToolTip")
--------------
 local Toggle1 = Section1:CreateToggle("AutoUnstore", Like, function(State)
          if state then
 loadstring(game:HttpGet("https://pastebin.com/raw/gAWBpDRS"))()

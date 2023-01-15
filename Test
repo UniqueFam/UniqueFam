@@ -1,23 +1,140 @@
-getgenv().Settings = {
-['Name'] = 'Fam Hub',
-['Intro'] = false,
-['Keybind'] = 'G'
+getgenv().autoUnstore = false
+local library = loadstring(game:HttpGet(('https://raw.GitHub user content.com/AikaV3rm/UiLib/master/Lib.lua')))()
+local w = library:CreateWindow("Auto unstore")
+local b = w:CreateFolder("AutoUnstore")
+b:Toggle("AutoUnstore",function(bool)
+getgenv(),autoUnstore = bool
+if bool then
+    Unstore();
+   end
+end)
+function Unstore()
+spawn(function()
+    while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Spin-Spin"
 }
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/kickTh/New-Ui/main/Shadow%20Lib%20v2.txt", true))()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    wait(60.0)
+    end
+end)
 
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Chop-Chop"
+}
 
-local Main = Window:NewTab('Main')
-local MainSection = Main:NewSection('Main')
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+      wait(60.0)
+    end
+end)
 
-    MainSection:NewButton("Back/Front Flip", "Makes you do gymnastics", function()
-        loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
-    end)
- 
-   MainSection:NewToggle("AutoUnstore", "go fast and jump high", function(state)
-if state then
-loadstring(game:HttpGet("https://pastebin.com/raw/gAWBpDRS"))()
-        else
-loadstring(game:HttpGet("https://pastebin.com/raw/UAJq1qys"))()
-        end
-    end)
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Spike-Spike"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Kilo-Kilo"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Smoke-Smoke"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Spring-Spring"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Bomb-Bomb"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Bird-Bird:Falcon"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Diamond-Diamond"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+     wait(60.0)
+    end
+end)
+
+function Unstore()
+spawn(function()
+while autoUnstore == true do
+local args = {
+    [1] = "LoadFruit",
+    [2] = "Sand-Sand"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    wait(60.0)
+    end
+end)
+Unstore()

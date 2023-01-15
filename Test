@@ -8,12 +8,13 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/kickT
 
 
 local Tab1 = Library:CreateTab('Main')
+local MainTab = Main:NewSection('Main')
 
-    Tab1:Button("Back/Front Flip", "Makes you do gymnastics", function()
+    Tab1:NewButton("Back/Front Flip", "Makes you do gymnastics", function()
         loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
     end)
  
-   Tab1:Toggle("AutoUnstore", "go fast and jump high", function(state)
+   Tab1:NewToggle("AutoUnstore", "go fast and jump high", function(state)
 if state then
 loadstring(game:HttpGet("https://pastebin.com/raw/gAWBpDRS"))()
         else

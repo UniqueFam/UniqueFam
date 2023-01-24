@@ -1,0 +1,119 @@
+getgenv().Attack = true
+getgenv().Validate = true
+getgenv().Reward = true
+spawn(function()
+while Attack == true do
+game:GetService("ReplicatedStorage").Remotes.Attack:FireServer() 
+wait(0.1)
+end
+end)
+
+spawn(function()
+while Validate == true do 
+local args = {
+    [1] = "One"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Validate:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+
+spawn(function()
+while Validate == true do 
+local args = {
+    [1] = "Two"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Validate:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+
+spawn(function()
+while Validate == true do 
+local args = {
+    [1] = "Three"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Validate:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+
+spawn(function()
+while Reward == true do
+local args = {
+    [1] = "1"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "2"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "4"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "5"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "6"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "7"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "8"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "9"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "10"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "11"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+
+local args = {
+    [1] = "12"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Reward:FireServer(unpack(args))
+wait(90.0)
+end
+end)

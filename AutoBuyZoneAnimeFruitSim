@@ -1,0 +1,101 @@
+getgenv().autoBuyZone = true
+
+spawn(function()
+while autoBuyZone == true do
+local args = {
+    [1] = 2,
+    [2] = workspace.ZoneEntrances:FindFirstChild("2")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+
+local args = {
+    [1] = 3,
+    [2] = workspace.ZoneEntrances:FindFirstChild("3")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+
+local args = {
+    [1] = 4,
+    [2] = workspace.ZoneEntrances:FindFirstChild("4")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+
+local args = {
+    [1] = 5,
+    [2] = workspace.ZoneEntrances:FindFirstChild("5")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 6,
+    [2] = workspace.ZoneEntrances:FindFirstChild("6")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 7,
+    [2] = workspace.ZoneEntrances:FindFirstChild("7")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 8,
+    [2] = workspace.ZoneEntrances:FindFirstChild("8")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 9,
+    [2] = workspace.ZoneEntrances:FindFirstChild("9")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 10,
+    [2] = workspace.ZoneEntrances:FindFirstChild("10")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 11,
+    [2] = workspace.ZoneEntrances:FindFirstChild("11")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 12,
+    [2] = workspace.ZoneEntrances:FindFirstChild("12")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 13,
+    [2] = workspace.ZoneEntrances:FindFirstChild("13")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 14,
+    [2] = workspace.ZoneEntrances:FindFirstChild("14")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     
+local args = {
+    [1] = 15,
+    [2] = workspace.ZoneEntrances:FindFirstChild("15")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+     local args = {
+    [1] = 16,
+    [2] = workspace.ZoneEntrances:FindFirstChild("16")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+
+local args = {
+    [1] = 17,
+    [2] = workspace.ZoneEntrances:FindFirstChild("17")
+}
+game:GetService("ReplicatedStorage").Remotes.UnlockZone:FireServer(unpack(args))
+      wait(0.50)
+  end
+ end)

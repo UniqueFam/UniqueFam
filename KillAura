@@ -1,4 +1,4 @@
 wait(0.1)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",true,game.Players.LocalPlayer.Character.HumanoidRootPart)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",true,game.Players.LocalPlayer.Character.HumanoidRootPart)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"L",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 end

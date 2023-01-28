@@ -10,5 +10,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.60)
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,1)
+wait(1.30)
 end

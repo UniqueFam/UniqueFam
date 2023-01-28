@@ -1,19 +1,11 @@
-getgenv().HandleInitiateS = true;
-while HandleInitiateS == true do
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(wep,game:GetService("Players").LocalPlayer,game:GetService("Players").LocalPlayer.Character,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,game:GetService("Players").LocalPlayer.Character.Humanoid,919)
-wait(1.50)
+lplayer = game:GetService("Players").LocalPlayer
+game:GetService("Workspace").CurrentCamera:Destroy()
+wait(0.1)
+game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Humanoid
+game:GetService("Workspace").CurrentCamera.CameraType = "Custom"
+lplayer.CameraMinZoomDistance = .5
+lplayer.CameraMaxZoomDistance = 400
+lplayer.CameraMode = "Classic"
+wait(0.1)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
 end
-end)

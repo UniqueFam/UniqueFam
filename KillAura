@@ -11,7 +11,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
+wait(1.40)
 end
 end)
 spawn(function()
@@ -26,7 +26,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
+wait(1.50)
 end
 end)
 spawn(function()
@@ -41,7 +41,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
+wait(2.0)
 end
 end)
 spawn(function()
@@ -56,7 +56,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
+wait(2.10)
 end
 end)
 spawn(function()
@@ -71,231 +71,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
-end
-end)
-spawn(function()
-while HandleInitiateS == true do
-local args = {
-    [1] = "Sword_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 1
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(1.35)
+wait(2.20)
 end
 end)

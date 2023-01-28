@@ -1,4 +1,5 @@
-getgenv().HandleInitiateS = true 
+getgenv().HandleInitiateS = true;
+pcall(function()
 while HandleInitiateS == true do
 local args = {
     [1] = "Sword_Combat_Slash",
@@ -30,6 +31,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-
 wait(1.0)
 end
+end)

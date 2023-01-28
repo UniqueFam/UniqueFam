@@ -1,4 +1,4 @@
-getgenv().HandleInitiateS = true
+getgenv().HandleInitiateS = false
 spawn(function()
 while HandleInitiateS == true do
 local args = {

@@ -1,11 +1,4 @@
-lplayer = game:GetService("Players").LocalPlayer
-game:GetService("Workspace").CurrentCamera:Destroy()
 wait(0.1)
-game:GetService("Workspace").CurrentCamera.CameraSubject = lplayer.Character.Humanoid
-game:GetService("Workspace").CurrentCamera.CameraType = "Custom"
-lplayer.CameraMinZoomDistance = .5
-lplayer.CameraMaxZoomDistance = 400
-lplayer.CameraMode = "Classic"
-wait(0.1)
-game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",false,game.Players.LocalPlayer.Character.HumanoidRootPart)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",true,game.Players.LocalPlayer.Character.HumanoidRootPart)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"L",true,game.Players.LocalPlayer.Character.HumanoidRootPart)
 end

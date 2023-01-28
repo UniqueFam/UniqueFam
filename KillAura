@@ -1,4 +1,5 @@
-getgenv().HandleInitiateS = true 
+getgenv().HandleInitiateS = true
+spawn(function()
 while HandleInitiateS == true do
 local args = {
     [1] = "Sword_Combat_Slash",
@@ -6,9 +7,25 @@ local args = {
     [3] = game:GetService("Players").LocalPlayer.Character,
     [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
     [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = 4
+    [6] = 1
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
 wait(1.35)
 end
+end)
+spawn(function()
+while HandleInitiateS == true do
+local args = {
+    [1] = "Sword_Combat_Slash",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [6] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
+wait(1.35)
+end
+end)

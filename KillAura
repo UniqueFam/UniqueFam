@@ -1,5 +1,50 @@
 getgenv().HandleInitiateS = true;
-pcall(function()
+getgenv().HandleInitiateC = true
+spawn(function()
+while HandleInitiateS == true do
+local args = {
+    [1] = "create",
+    [2] = "BoolValue",
+    [3] = game:GetService("ReplicatedStorage").PlayerValues.hee234560p,
+    [4] = {
+        ["Name"] = "sword_slash"
+    },
+    [5] = 0.3
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait(1.0)
+end
+end)
+spawn(function()
+while HandleInitiateC == true do 
+local args = {
+    [1] = "Players.hee234560p.PlayerScripts.Client_Modules.Main_Script",
+    [2] = 301054.58590249904,
+    [3] = "Play_Sound",
+    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [5] = game:GetService("ReplicatedStorage").Sounds.Sword.SwingSharp
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_C:FireServer(unpack(args))
+wait(1.0)
+end
+end)
+spawn(function()
+while HandleInitiateC == true do 
+local args = {
+    [1] = "Players.hee234560p.PlayerScripts.Client_Modules.Main_Script",
+    [2] = 301054.58744677,
+    [3] = "Enable_Blade",
+    [4] = game:GetService("Players").LocalPlayer.Character.Equiped.Ac_Blade.Blade,
+    [5] = 0.4
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_C:FireServer(unpack(args))
+wait(1.0)
+end
+end)
+spawn(function()
 while HandleInitiateS == true do
 local args = {
     [1] = "Sword_Combat_Slash",
@@ -11,6 +56,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(0.50)
+wait(1.0)
 end
 end)

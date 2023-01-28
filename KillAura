@@ -11,6 +11,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
-wait(0.1)
+wait(0.50)
 end
 end)

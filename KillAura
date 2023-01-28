@@ -28,5 +28,8 @@ local args = {
     [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
     [6] = 1
 }
-wait(0.50)
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
+
+wait(1.0)
 end

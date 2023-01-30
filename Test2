@@ -1,14 +1,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-_G.Window, MainGUI = Library.CreateLib("Unique Hub", "Ocean")
-
+local Window = Library.CreateLib("Unique Hub", "Ocean")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
 _G.WebhookLink = _G.WebhookLink or 0
 local notifier = false
 local whNotifier = false
 
-local Tab1 = _G.Window:CreateTab("main")
-local Groupbox1 = Tab1:CreateGroupbox("funcs", "Left")
-
-local ExampleToggle2 = Groupbox1:CreateToggle("fruit farm", function(state)
+MainSection:NewToggle("fruit farm", function(state)
    print(state)
    _G.Toggle = state
 end)

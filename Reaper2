@@ -271,13 +271,13 @@ local A = Misc.Toggle({
         if getgenv().Quest == "Op Killer" and Value then
             getgenv().OPK = true
             getgenv().AQ = false
-            getgenv().HMH = false
+            getgenv().HM = false
         elseif getgenv().Quest == "Acquired Taste" and Value then
             getgenv().AQ = true
             getgenv().OPK = false
-            getgenv().HMH = false
+            getgenv().HM = false
          elseif getge().Quest == "Hueco Mundo Hunt" and Value then
-            getgenv().HMH = true
+            getgenv().HM = true
             getgenv().OPK = false
             getgenv().AQ = flase
         end
@@ -311,15 +311,15 @@ local A = Misc.Toggle({
                 end
             end);
          end
-         while getgenv().HMH and wait() do
+         while getgenv().HM and wait() do
             pcall(function()
                 local wtf3 = game:GetService("Players").LocalPlayer.PlayerGui.HUD.QuestsFrame2["Hueco Mundo Hunt"].Frame
                                  .Objective
                 if string.match(wtf2.Text, "Kill 1 Enhanced") or string.match(wtf2.Text, "Kill 2 Enhanced") then
-                    getgenv().Mob = "Enhanced Arrancar"
+                    getgenv().Mob = "Enhanced Arrancars"
                 elseif string.match(wtf2.Text, "Kill 1 Vasto") and string.match(wtf2.Text, "Kill 0 Enhanced") then
                     getgenv().Mob = "Vasto Lorde"
-                elseif string.match(wtf2.Text, "Kill 3 Adjucha") or string.match(wtf2.Text, "Kill 2 Adjucha") or
+                elseif string.match(wtf2.Text, "Kill 3 Adjuchas") or string.match(wtf2.Text, "Kill 2 Adjuchas") or
                     string.match(wtf2.Text, "Kill 1 Adjucha") and string.match(wtf2.Text, "Kill 0 Vasto") then
                     getgenv().Mob = "Adjucha"
                 end

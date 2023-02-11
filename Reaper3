@@ -420,13 +420,103 @@ local B = AutoSkill.Toggle({
     end,
     Enabled = false
 })
-
 local B = AutoSkill.Toggle({
     Text = "Skill 5",
     Callback = function(Value)
         getgenv().Five = Value
         while getgenv().Five and wait() do
             game:GetService("VirtualInputManager"):SendKeyEvent(true, "Five", false, game);
+            wait(1)
+            local a = {
+                [1] = {
+                    ["inputType"] = Enum.UserInputType.MouseButton1,
+                    ["keyCode"] = Enum.KeyCode.Unknown
+                }
+            }
+            game:GetService("ReplicatedStorage").Remotes.Input:FireServer(unpack(a))
+        end
+    end,
+    Enabled = false
+})
+local B = AutoSkill.Toggle({
+    Text = "Skill 6",
+    Callback = function(Value)
+        getgenv().Five = Value
+        while getgenv().Five and wait() do
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, "Six", false, game);
+            wait(1)
+            local a = {
+                [1] = {
+                    ["inputType"] = Enum.UserInputType.MouseButton1,
+                    ["keyCode"] = Enum.KeyCode.Unknown
+                }
+            }
+            game:GetService("ReplicatedStorage").Remotes.Input:FireServer(unpack(a))
+        end
+    end,
+    Enabled = false
+})
+local B = AutoSkill.Toggle({
+    Text = "Skill 7",
+    Callback = function(Value)
+        getgenv().Five = Value
+        while getgenv().Five and wait() do
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, "Seven", false, game);
+            wait(1)
+            local a = {
+                [1] = {
+                    ["inputType"] = Enum.UserInputType.MouseButton1,
+                    ["keyCode"] = Enum.KeyCode.Unknown
+                }
+            }
+            game:GetService("ReplicatedStorage").Remotes.Input:FireServer(unpack(a))
+        end
+    end,
+    Enabled = false
+})
+
+local B = AutoSkill.Toggle({
+    Text = "Skill R",
+    Callback = function(Value)
+        getgenv().Five = Value
+        while getgenv().Five and wait() do
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, "R", false, game);
+            wait(1)
+            local a = {
+                [1] = {
+                    ["inputType"] = Enum.UserInputType.MouseButton1,
+                    ["keyCode"] = Enum.KeyCode.Unknown
+                }
+            }
+            game:GetService("ReplicatedStorage").Remotes.Input:FireServer(unpack(a))
+        end
+    end,
+    Enabled = false
+})
+local B = AutoSkill.Toggle({
+    Text = "Skill T",
+    Callback = function(Value)
+        getgenv().Five = Value
+        while getgenv().Five and wait() do
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, "T", false, game);
+            wait(1)
+            local a = {
+                [1] = {
+                    ["inputType"] = Enum.UserInputType.MouseButton1,
+                    ["keyCode"] = Enum.KeyCode.Unknown
+                }
+            }
+            game:GetService("ReplicatedStorage").Remotes.Input:FireServer(unpack(a))
+        end
+    end,
+    Enabled = false
+})
+local B = AutoSkill.Toggle({
+    Text = "Skill Y",
+    Callback = function(Value)
+        getgenv().Five = Value
+        while getgenv().Five and wait() do
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, "Y", false, game);
             wait(1)
             local a = {
                 [1] = {

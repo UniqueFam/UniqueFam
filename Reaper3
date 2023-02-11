@@ -258,7 +258,7 @@ local C = Main.Slider({
     end,
     Min = -20,
     Max = 20,
-    Def = -7
+    Def = 20
 })
 
 local Misc = Menu.New({

@@ -124,7 +124,7 @@ end;
 
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Urbanstorms/Asterisk-Hub/main/Lib.lua"))()
 local Menu = Material.Load({
-    Title = "Fam Hub | Reaper 2",
+    Title = "Asterisk Hub | Reaper 2",
     Style = 1,
     SizeX = 500,
     SizeY = 350,

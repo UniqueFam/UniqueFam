@@ -10,7 +10,7 @@
 ]]
 -- Custom tween func & noclip + antifall.
 local TweenService = game:GetService("TweenService")
-local noclipE = true
+local noclipE = false
 local antifall = true
 
 local function noclip()

@@ -1,0 +1,27 @@
+_G.Settings = {
+    Players = {
+        ["Ignore Me"] = true,
+        ["Ignore Others"] = true
+    },
+    Meshes = {
+        Destroy = false,
+        LowDetail = true
+    },
+    Images = {
+        Invisible = true,
+        LowDetail = false,
+        Destroy = false
+    },
+    Other = {
+        ["FPS Cap"] = 240, --Set this true to uncap FPS
+        ["No Particles"] = true,
+        ["No Camera Effects"] = true,
+        ["No Explosions"] = true, --Not Recommended for PVP games
+        ["No Clothes"] = true,
+        ["Low Water Graphics"] = true,
+        ["No Shadows"] = true,
+        ["Low Rendering"] = true,
+        ["Low Quality Parts"] = true
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()

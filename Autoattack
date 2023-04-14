@@ -1,0 +1,25 @@
+getgenv().A = true
+spawn(function()
+while A == true do
+local args = {
+    [1] = "Swing",
+    [2] = 1,
+    [3] = "Fist"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Server"):WaitForChild("Initiate_Server"):FireServer(unpack(args))
+wait()
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = "Swing",
+    [2] = 1,
+    [3] = "Sword"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server.Initiate_Server:FireServer(unpack(args))
+wait(0.01)
+end
+end)

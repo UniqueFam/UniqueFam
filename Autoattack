@@ -8,7 +8,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Server"):WaitForChild("Initiate_Server"):FireServer(unpack(args))
-wait(0.01)
+wait(0.09)
 end
 end)
 spawn(function()

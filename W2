@@ -1,4 +1,4 @@
- getgenv().A = true
+getgenv().A = true
  
 spawn(function()
 while A == true do

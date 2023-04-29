@@ -72,7 +72,7 @@ end
 end)
 local args = {
     [1] = {
-        ["Type"] = "End",
+        ["Type"] = "Continue",
         ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Accept"
     }

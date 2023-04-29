@@ -112,3 +112,31 @@ game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
 wait(10.0)
 end
 end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Osiris,
+        ["Path"] = "Start8"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Osiris,
+        ["Path"] = "Accept"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)

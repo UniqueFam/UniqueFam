@@ -70,3 +70,12 @@ game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
 wait(10.0)
 end
 end)
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Path"] = "Accept"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))

@@ -70,12 +70,3 @@ game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
 wait(10.0)
 end
 end)
-local args = {
-    [1] = {
-        ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Daichi,
-        ["Path"] = "Accept"
-    }
-}
-
-game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))

@@ -5,7 +5,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Npc"] = workspace.Npcs.Daichi,
         ["Path"] = "Start"
     }
 }
@@ -19,7 +19,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Npc"] = workspace.Npcs.Daichi,
         ["Path"] = "Start1"
     }
 }
@@ -33,7 +33,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Npc"] = workspace.Npcs.Daichi,
         ["Path"] = "Start2"
     }
 }
@@ -47,7 +47,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Npc"] = workspace.Npcs.Daichi,
         ["Path"] = "Start3"
     }
 }
@@ -61,7 +61,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Npc"] = workspace.Npcs.Daichi,
         ["Path"] = "Start4"
     }
 }
@@ -73,7 +73,7 @@ end)
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikimu,
+        ["Npc"] = workspace.Npcs.Daichi,
         ["Path"] = "Accept"
     }
 }

@@ -70,3 +70,17 @@ game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
 wait(10.0)
 end
 end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Daichi,
+        ["Path"] = "Accept"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)

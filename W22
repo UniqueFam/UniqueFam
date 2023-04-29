@@ -1,0 +1,142 @@
+getgenv().A = true
+ 
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start1"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start2"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start3"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start4"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start5"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start6"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start7"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "Continue",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Start8"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)
+spawn(function()
+while A == true do
+local args = {
+    [1] = {
+        ["Type"] = "End",
+        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Path"] = "Accept"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Dialogue:FireServer(unpack(args))
+wait(10.0)
+end
+end)

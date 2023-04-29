@@ -5,7 +5,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start"
     }
 }
@@ -19,7 +19,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start1"
     }
 }
@@ -33,7 +33,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start2"
     }
 }
@@ -47,7 +47,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start3"
     }
 }
@@ -61,7 +61,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start4"
     }
 }
@@ -75,7 +75,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start5"
     }
 }
@@ -89,7 +89,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start6"
     }
 }
@@ -103,7 +103,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start7"
     }
 }
@@ -117,7 +117,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "Continue",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Start8"
     }
 }
@@ -131,7 +131,7 @@ while A == true do
 local args = {
     [1] = {
         ["Type"] = "End",
-        ["Npc"] = workspace.Npcs.Ikumi,
+        ["Npc"] = workspace.Npcs.Ikimu,
         ["Path"] = "Accept"
     }
 }

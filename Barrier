@@ -1,0 +1,94 @@
+getgenv().F = true
+
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Barrier",
+       [2] = "Barrier",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Barrier",
+       [2] = "Bubble",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Barrier",
+       [2] = "Crash",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Barrier",
+       [2] = "Spikes",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)

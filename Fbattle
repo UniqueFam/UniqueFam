@@ -1,0 +1,116 @@
+getgenv().F = true
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Phoenix",
+       [2] = "Fujiazami",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Phoenix",
+       [2] = "TalonSlam",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Phoenix",
+       [2] = "PhoenixInferno",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Phoenix",
+       [2] = "Bluebird",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while F == true do
+local args = {
+       [1] = "Phoenix",
+       [2] = "Transform",
+       [3] = {
+           ["MouseRay"] = {
+               ["Normal"] = nil --[[Vector3]],
+               ["Direction"] = nil --[[Vector3]],
+               ["Origin"] = nil --[[Vector3]],
+               ["Instance"] = workspace.Map.Part,
+               ["Distance"] = 110.60116577148438,
+               ["Position"] = nil --[[Vector3]],
+               ["Material"] = Enum.Material.Slate
+           }
+       }
+   }
+   
+   game:GetService("ReplicatedStorage").Replicator:InvokeServer(unpack(args))
+wait()
+end
+end)

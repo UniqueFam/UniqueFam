@@ -148,7 +148,7 @@ end)
 local Label1 = AF:Label("If you are using hold skills you can't tab out")
 
 local FruitsTable = {"Phoenix", "Quake", "Gravity"}
-local ASMD1 = AS:MultiDropdown("Select Fruits", {"Phoenix", "Quake", "Gravity", "Magma", "Flame", "Light", "Darkness", "Ice", "Bomb", "TS Rubber", "Lightning", "Dragon", "Dough"}, {"Phoenix", "Dough", "TS Rubber", "Dragon", "Lightning", "Quake", "Gravity"}, "SelectFruits1", function(Option)
+local ASMD1 = AS:MultiDropdown("Select Fruits", {"Phoenix", "Quake", "Gravity", "Magma", "Flame", "Light", "Darkness", "Ice", "Bomb", "TSRubber", "Lightning", "Dragon", "Dough"}, {"Phoenix", "Dough", "TSRubber", "Dragon", "Lightning", "Quake", "Gravity"}, "SelectFruits1", function(Option)
     FruitsTable = Option    
 end)
 

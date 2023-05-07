@@ -147,7 +147,7 @@ end)
 
 local Label1 = AF:Label("If you are using hold skills you can't tab out")
 
-local FruitsTable = {"Phoenix", "Quake", "Gravity"}
+local FruitsTable = {"Phoenix", "Quake", "Gravity", "Dragon", "Lightning", "Dough", "TSRubber"}
 local ASMD1 = AS:MultiDropdown("Select Fruits", {"Phoenix", "Quake", "Gravity", "Magma", "Flame", "Light", "Darkness", "Ice", "Bomb", "TSRubber", "Lightning", "Dragon", "Dough"}, {"Phoenix", "Dough", "TSRubber", "Dragon", "Lightning", "Quake", "Gravity"}, "SelectFruits1", function(Option)
     FruitsTable = Option    
 end)
@@ -328,7 +328,7 @@ MS:Button("Rejoin Server", function()
 end)
 
 MS:Button("Copy Discord Link", function()
-    setclipboard("https://discord.gg/pdsSGSsUj2")
+    setclipboard("")
 end)
 
 -- Some Functions --
@@ -485,7 +485,7 @@ end)
 game:GetService("RunService").RenderStepped:Connect(function()
     PlayerFruit = Player.MAIN_DATA.Slots[Player.MAIN_DATA.Slot.Value].Value
 
-    if game.Workspace.Characters.NPCs:FindFirstChild("Marco") then
+    if game.Workspace.Characters.NPCs:FindFirstChild("Kaido") then
         BossSpawned:Set("Marco Spawned: Yes")
     else
         BossSpawned:Set("Marco Spawned: No")
@@ -618,11 +618,11 @@ game:GetService("RunService").RenderStepped:Connect(function()
     end
 
     if MarcoESP then
-        if game.Workspace.Characters.NPCs:FindFirstChild("Marco") then
-            local Marco = game.Workspace.Characters.NPCs:FindFirstChild("Marco")
-            local MarcoHead = game.Workspace.Characters.NPCs:FindFirstChild("Marco").Head
-            if not MarcoHead:FindFirstChild("PineappleESP") then
-                local BGui = Instance.new("BillboardGui", MarcoHead)
+        if game.Workspace.Characters.NPCs:FindFirstChild("Kaido") then
+            local Kaido = game.Workspace.Characters.NPCs:FindFirstChild("Kaido")
+            local KaidoHead = game.Workspace.Characters.NPCs:FindFirstChild("Kaido").Head
+            if not KaidoHead:FindFirstChild("PineappleESP") then
+                local BGui = Instance.new("BillboardGui", KaidoHead)
                 BGui.Name = "PineappleESP"
                 BGui.Size = UDim2.new(0, 175, 0, 30)
                 BGui.Adornee = MarcoHead
@@ -630,7 +630,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 
                 local Nama = Instance.new("TextLabel", BGui)
                 Nama.Name = "Nama"
-                Nama.Text = "Marco"
+                Nama.Text = "Kaido"
                 Nama.TextScaled = true
                 Nama.Size = UDim2.new(1, 0, 0.5, 0)
                 Nama.Position = UDim2.new(0, 0, 0, 0)
@@ -642,7 +642,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 
                 local Health = Instance.new("TextLabel", BGui)
                 Health.Name = "Health"
-                Health.Text = "Health: " .. Round(Marco:FindFirstChild("Humanoid").Health) .. "/" .. Round(Marco:FindFirstChild("Humanoid").MaxHealth)
+                Health.Text = "Health: " .. Round(Marco:FindFirstChild("Humanoid").Health) .. "/" .. Round(Kaido:FindFirstChild("Humanoid").MaxHealth)
                 Health.TextScaled = true
                 Health.Size = UDim2.new(1, 0, 0.5, 0)
                 Health.Position = UDim2.new(0, 0, 0.5, 0)
@@ -652,13 +652,13 @@ game:GetService("RunService").RenderStepped:Connect(function()
                 Health.Font = Enum.Font.GothamBold
                 Health.TextStrokeTransparency = 0
             else
-                MarcoHead.PineappleESP.Health.Text = "Health: " .. Round(Marco:FindFirstChild("Humanoid").Health) .. "/" .. Round(Marco:FindFirstChild("Humanoid").MaxHealth)
+                MarcoHead.PineappleESP.Health.Text = "Health: " .. Round(Marco:FindFirstChild("Humanoid").Health) .. "/" .. Round(Kaido:FindFirstChild("Humanoid").MaxHealth)
             end
         end
     else
-        if game.Workspace.Characters.NPCs:FindFirstChild("Marco") then
-            if game.Workspace.Characters.NPCs:FindFirstChild("Marco").Head:FindFirstChild("PineappleESP") then
-                game.Workspace.Characters.NPCs:FindFirstChild("Marco").Head:FindFirstChild("PineappleESP"):Destroy()
+        if game.Workspace.Characters.NPCs:FindFirstChild("Kaido") then
+            if game.Workspace.Characters.NPCs:FindFirstChild("Kaido").Head:FindFirstChild("PineappleESP") then
+                game.Workspace.Characters.NPCs:FindFirstChild("Kaido").Head:FindFirstChild("PineappleESP"):Destroy()
             end
         end
     end

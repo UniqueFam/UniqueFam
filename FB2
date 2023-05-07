@@ -642,7 +642,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 
                 local Health = Instance.new("TextLabel", BGui)
                 Health.Name = "Health"
-                Health.Text = "Health: " .. Round(Marco:FindFirstChild("Humanoid").Health) .. "/" .. Round(Kaido:FindFirstChild("Humanoid").MaxHealth)
+                Health.Text = "Health: " .. Round(Kaido:FindFirstChild("Humanoid").Health) .. "/" .. Round(Kaido:FindFirstChild("Humanoid").MaxHealth)
                 Health.TextScaled = true
                 Health.Size = UDim2.new(1, 0, 0.5, 0)
                 Health.Position = UDim2.new(0, 0, 0.5, 0)
@@ -652,7 +652,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
                 Health.Font = Enum.Font.GothamBold
                 Health.TextStrokeTransparency = 0
             else
-                MarcoHead.PineappleESP.Health.Text = "Health: " .. Round(Marco:FindFirstChild("Humanoid").Health) .. "/" .. Round(Kaido:FindFirstChild("Humanoid").MaxHealth)
+                KaidoHead.PineappleESP.Health.Text = "Health: " .. Round(Kaido:FindFirstChild("Humanoid").Health) .. "/" .. Round(Kaido:FindFirstChild("Humanoid").MaxHealth)
             end
         end
     else
@@ -757,10 +757,10 @@ game:GetService("RunService").RenderStepped:Connect(function()
     end
 
     if AutoFarmMarco and (Player.Character or Player.CharacterAdded:Wait()) and Busy ~= true then
-        if game.Workspace.Characters.NPCs:FindFirstChild("Marco") then
-            local Marco = game.Workspace.Characters.NPCs:WaitForChild("Marco")
-            if Marco:WaitForChild("Humanoid").Health >= 1 then
-                Player.Character.HumanoidRootPart.CFrame = Marco:WaitForChild("HumanoidRootPart").CFrame * CFrame.new(0, 0, 3)
+        if game.Workspace.Characters.NPCs:FindFirstChild("Kaido") then
+            local Kaido = game.Workspace.Characters.NPCs:WaitForChild("Kaido")
+            if Kaido:WaitForChild("Humanoid").Health >= 1 then
+                Player.Character.HumanoidRootPart.CFrame = Kaido:WaitForChild("HumanoidRootPart").CFrame * CFrame.new(0, 0, 3)
 
                 if game.Players.LocalPlayer.PlayerGui.UI.Hotbar:FindFirstChild("1") then
                     local Str = string.gsub(game.Players.LocalPlayer.PlayerGui.UI.Hotbar:FindFirstChild("1").Title.Text, "%s+", "")

@@ -1,3 +1,4 @@
+
 getgenv().AutoCollectChest = true
 
 spawn(function()
@@ -6,20 +7,12 @@ spawn(function()
             for _, v in pairs(game:GetService("Workspace").Debree:GetChildren()) do
                 if v.Name == "Loot_Chest" then
                     for _, c in pairs(v:FindFirstChild("Drops"):GetChildren()) do
-                        if game:GetService("ReplicatedStorage")["Player_Data"}[game.Players.LocalPlayer.Name].Inventory.Items:FindFirstChild(c.Name) then
-                           
-                                v["Add_To_Inventory"]:InvokeServer(c.Name)
-                                delay(0.5, function()
-                                    c:Destroy()
-                                end)
-                            end
-                        else
+                        if game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].Inventory.Items:FindFirstChild(c.Name) then
                             v["Add_To_Inventory"]:InvokeServer(c.Name)
                             delay(0.5, function()
                                 c:Destroy()
                             end)
-                        
-
+                        end
                     end
                 end
             end

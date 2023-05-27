@@ -27,29 +27,6 @@ local a = {"KnockedOut", "Stun", "FakeStun", "carry_ting_asdasd", "RagDoll", "no
     end)
 end
 
-local MapLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/T6kdK0bq"))()
-end)
-
-local ItemLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7fmjAFsP"))()
-end)
-
-local EntityLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/CLtU1aZD"))()
-end)
-
-local MaterialLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7pGTv3Kv"))()
-end)
-
-local Material2LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/F0FNu09V"))()
-end)
-
-local Material3LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/SVdVLNr5"))()
-end)
 
 coroutine.resume(MapLoaderCoroutine)
 coroutine.resume(ItemLoaderCoroutine)

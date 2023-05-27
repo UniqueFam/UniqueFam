@@ -27,13 +27,6 @@ local a = {"KnockedOut", "Stun", "FakeStun", "carry_ting_asdasd", "RagDoll", "no
     end)
 end
 
-
-coroutine.resume(MapLoaderCoroutine)
-coroutine.resume(ItemLoaderCoroutine)
-coroutine.resume(MaterialLoaderCoroutine)
-coroutine.resume(Material2LoaderCoroutine)
-coroutine.resume(Material3LoaderCoroutine)
-
 if game.PlaceId == 5956785391 then
     local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {Title = "Main Menu"; Text = "HAHA YOUR NAKED NOW"; Duration = 60; Button1 = "Ok"; })

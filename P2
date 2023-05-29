@@ -304,7 +304,7 @@ local attackMethods = {
     ["Sword"] = 'Sword_Combat_Slash',
     ["Scythe"] = 'Scythe_Combat_Slash',
     ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_Combat_Slash'
+    ["Fans"] = 'fans_combat_slash'
 }
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
@@ -1362,7 +1362,7 @@ local attackMethods = {
     ["Sword"] = 'Sword_Combat_Slash',
     ["Scythe"] = 'Scythe_Combat_Slash',
     ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_Combat_Slash'
+    ["Fans"] = 'fans_combat_slash'
 }
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
@@ -2361,7 +2361,7 @@ local attackMethods = {
     ["Sword"] = 'Sword_Combat_Slash',
     ["Scythe"] = 'Scythe_Combat_Slash',
     ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_Combat_Slash'
+    ["Fans"] = 'fans_combat_slash'
 
 }
 
@@ -3050,7 +3050,7 @@ local attackMethods = {
     ["Sword"] = 'Sword_Combat_Slash',
     ["Scythe"] = 'Scythe_Combat_Slash',
     ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_Combat_Slash'
+    ["Fans"] = 'fans_combat_slash'
 }
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 

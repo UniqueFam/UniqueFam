@@ -82,36 +82,6 @@ local function GetDistance(Endpoint)
     return Magnitude
 end
 
-local MapLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/T6kdK0bq"))()
-end)
-
-local ItemLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7fmjAFsP"))()
-end)
-
-local EntityLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/CLtU1aZD"))()
-end)
-
-local MaterialLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7pGTv3Kv"))()
-end)
-
-local Material2LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/F0FNu09V"))()
-end)
-
-local Material3LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/SVdVLNr5"))()
-end)
-
-coroutine.resume(MapLoaderCoroutine)
-coroutine.resume(ItemLoaderCoroutine)
-coroutine.resume(MaterialLoaderCoroutine)
-coroutine.resume(Material2LoaderCoroutine)
-coroutine.resume(Material3LoaderCoroutine)
-
 
 function Tween(Endpoint)
     if typeof(Endpoint) == "Instance" then
@@ -304,7 +274,7 @@ local attackMethods = {
     ["Sword"] = 'Sword_Combat_Slash',
     ["Scythe"] = 'Scythe_Combat_Slash',
     ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_Combat_Slash'
+    ["Fans"] = 'fans_combat_slash'
 }
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 

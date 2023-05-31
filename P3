@@ -903,7 +903,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().Z and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("Z")
+                        SkillBind("1")
                     end              
                     UsingSkill = false
                 end
@@ -920,7 +920,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().X and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("X")
+                        SkillBind("2")
                     end              
                     UsingSkill = false
                 end
@@ -936,7 +936,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().C and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("C")
+                        SkillBind("3")
                     end              
                     UsingSkill = false
                 end
@@ -952,7 +952,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().V and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("V")
+                        SkillBind("4")
                     end              
                     UsingSkill = false
                 end
@@ -968,7 +968,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().B and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("B")
+                        SkillBind("5")
                     end              
                     UsingSkill = false
                 end
@@ -984,7 +984,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().N and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("N")
+                        SkillBind("6")
                     end              
                     UsingSkill = false
                 end
@@ -1959,7 +1959,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().Z and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("Z")
+                        SkillBind("1")
                     end              
                     UsingSkill = false
                 end
@@ -1976,7 +1976,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().X and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("X")
+                        SkillBind("2")
                     end              
                     UsingSkill = false
                 end
@@ -1992,7 +1992,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().C and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("C")
+                        SkillBind("3")
                     end              
                     UsingSkill = false
                 end
@@ -2008,7 +2008,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().V and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("V")
+                        SkillBind("4")
                     end              
                     UsingSkill = false
                 end
@@ -2024,7 +2024,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().B and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("B")
+                        SkillBind("5")
                     end              
                     UsingSkill = false
                 end
@@ -2040,7 +2040,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().N and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("N")
+                        SkillBind("6")
                     end              
                     UsingSkill = false
                 end

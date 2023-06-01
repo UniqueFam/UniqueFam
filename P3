@@ -1959,7 +1959,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().Z and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("1")
+                        SkillBind("Z")
                     end              
                     UsingSkill = false
                 end
@@ -1976,7 +1976,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().X and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("2")
+                        SkillBind("X")
                     end              
                     UsingSkill = false
                 end
@@ -1992,7 +1992,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().C and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("3")
+                        SkillBind("C")
                     end              
                     UsingSkill = false
                 end
@@ -2008,7 +2008,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().V and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("4")
+                        SkillBind("V")
                     end              
                     UsingSkill = false
                 end
@@ -2024,7 +2024,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().B and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("5")
+                        SkillBind("B")
                     end              
                     UsingSkill = false
                 end
@@ -2040,7 +2040,7 @@ spawn(function()
                 if AutoUseSkills and getgenv().N and not UsingSkill then
                     for i = 1,7 do
                         UsingSkill = true
-                        SkillBind("6")
+                        SkillBind("N")
                     end              
                     UsingSkill = false
                 end

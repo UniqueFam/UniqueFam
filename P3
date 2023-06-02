@@ -361,7 +361,17 @@ end)
 Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
+Farming:AddToggle("inf war fans", false, function(t)
+    getgenv().F = t
+end)
 
+spawn(function()
+while task.wait() do
+if getgenv().F then
+game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
+end
+end
+end)
 --Settings
 
 getgenv().Method = "Sword"
@@ -1420,6 +1430,18 @@ Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
+Farming:AddToggle("inf war fans", false, function(t)
+    getgenv().F = t
+end)
+
+spawn(function()
+while task.wait() do
+if getgenv().F then
+game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
+end
+end
+end)
+
 --Settings
 
 getgenv().Method = "Sword"
@@ -2404,6 +2426,17 @@ end)
 
 Farming:AddToggle("No Cd Moves - Can Kick", false, function(value)
     getgenv().NoCdMoves = value
+end)
+Farming:AddToggle("inf war fans", false, function(t)
+    getgenv().F = t
+end)
+
+spawn(function()
+while task.wait() do
+if getgenv().F then
+game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
+end
+end
 end)
 
 

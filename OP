@@ -1439,6 +1439,9 @@ end)
 Farming:AddToggle("inf war fans", false, function(t)
     getgenv().F = t
 end)
+Farming:AddButton("God Mode - Kamado Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
+end)
 
 spawn(function()
 while task.wait() do

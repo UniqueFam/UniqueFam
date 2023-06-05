@@ -364,6 +364,9 @@ end)
 Farming:AddToggle("inf war fans", false, function(t)
     getgenv().F = t
 end)
+Farming:AddButton("No Stun",function()
+nostun()
+end)
 
 spawn(function()
 while task.wait() do
@@ -1442,6 +1445,9 @@ end)
 Farming:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
+Farming:AddButton("No Stun",function()
+nostun()
+end)
 
 spawn(function()
 while task.wait() do
@@ -2458,6 +2464,9 @@ Farming:AddButton("Spacial Awareness",function()
  Farming:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
+Farming:AddButton("No Stun",function()
+nostun()
+end)
 spawn(function()
 while task.wait() do
 if getgenv().F then
@@ -3152,6 +3161,9 @@ end)
 
 Farming:AddToggle("No Cd Moves - Can Kick", false, function(value)
     getgenv().NoCdMoves = value
+end)
+Farming:AddButton("No Stun",function()
+nostun()
 end)
 
 

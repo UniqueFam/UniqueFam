@@ -2452,6 +2452,9 @@ Farming:AddButton("Spacial Awareness",function()
   Farming:AddButton("Furiosity",function()
   game:GetService("ReplicatedStorage").Remotes.clan_furiosity_add:FireServer(true)
  end)
+ Farming:AddButton("God Mode - Kamado Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
+end)
 spawn(function()
 while task.wait() do
 if getgenv().F then

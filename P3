@@ -279,7 +279,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        task.wait(5)
+        task.wait(3)
         return true 
     end 
 end 

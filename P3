@@ -2446,7 +2446,12 @@ end)
 Farming:AddToggle("inf war fans", false, function(t)
     getgenv().F = t
 end)
-
+Farming:AddButton("Spacial Awareness",function()
+     game:GetService("ReplicatedStorage").Remotes.spacial_awareness_remote:FireServer(true)
+  end)
+  Farming:AddButton("Furiosity",function()
+  game:GetService("ReplicatedStorage").Remotes.clan_furiosity_add:FireServer(true)
+ end)
 spawn(function()
 while task.wait() do
 if getgenv().F then

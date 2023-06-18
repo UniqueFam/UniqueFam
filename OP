@@ -1445,10 +1445,31 @@ end)
 Farming:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
+Farming:AddToggle("Autoblock", false, function(t)
+   getgenv().Block = t
+   end)
 Farming:AddButton("No Stun",function()
 nostun()
 end)
+Farming:AddToggle("Autoblock", false, function(t)
+   getgenv().Block = t
+   end)
 
+spawn(function()
+while task.wait() do
+if getgenv().Block then
+local args = {
+    [1] = "add_blocking",
+    [2] = math.huge,
+    [3] = math.huge,
+    [4] = math.huge,
+    [5] = math.huge
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
 spawn(function()
 while task.wait() do
 if getgenv().F then
@@ -2474,7 +2495,25 @@ game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
 end
 end
 end)
+Farming:AddToggle("Autoblock", false, function(t)
+   getgenv().Block = t
+   end)
 
+spawn(function()
+while task.wait() do
+if getgenv().Block then
+local args = {
+    [1] = "add_blocking",
+    [2] = math.huge,
+    [3] = math.huge,
+    [4] = math.huge,
+    [5] = math.huge
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
 
 --Settings
 

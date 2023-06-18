@@ -279,7 +279,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        
+        task.wait()
         return true 
     end 
 end 
@@ -651,7 +651,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(2)
+            task.wait(1)
             end
         end)
     end
@@ -1356,7 +1356,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        
+        task.wait()
         return true 
     end 
 end 
@@ -1731,7 +1731,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(2)
+            task.wait(1)
             end
         end)
     end
@@ -2384,7 +2384,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        
+        task.wait()
         return true 
     end 
 end 
@@ -2630,7 +2630,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(2)
+            task.wait(1)
             end
         end)
     end

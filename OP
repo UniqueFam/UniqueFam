@@ -364,8 +364,42 @@ end)
 Farming:AddToggle("inf war fans", false, function(t)
     getgenv().F = t
 end)
-Farming:AddButton("No Stun",function()
-nostun()
+
+Farming:AddToggle("Scythe GodMode", false, function(t)
+getgenv().S = t
+end)
+Farming:AddToggle("Ice GodMode”, false, function(t)
+getgenv().Ice = t
+end)
+
+spawn(function()
+while task.wait()
+if getgenv().S then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "scythe_asteroid_reap",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while task.wait()
+if getgenv().Ice then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "ice_demon_art_bodhisatva",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args)) 
+end
+end
 end)
 
 spawn(function()
@@ -387,12 +421,12 @@ Settings:AddDropdown("Farm Method", {"Above","Below","Behind"}, "Above", false, 
     getgenv().FarmMethod = v
 end)
 
-getgenv().tweenspeed = 10
+getgenv().tweenspeed = 300
 Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 
-getgenv().Distance = 5
+getgenv().Distance = 10
 Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
@@ -1448,12 +1482,43 @@ end)
 Farming:AddToggle("Autoblock", false, function(t)
    getgenv().Block = t
    end)
-Farming:AddButton("No Stun",function()
-nostun()
+
+Farming:AddToggle("Scythe GodMode", false, function(t)
+getgenv().S = t
 end)
-Farming:AddToggle("Autoblock", false, function(t)
-   getgenv().Block = t
-   end)
+Farming:AddToggle("Ice GodMode”, false, function(t)
+getgenv().Ice = t
+end)
+
+spawn(function()
+while task.wait()
+if getgenv().S then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "scythe_asteroid_reap",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while task.wait()
+if getgenv().Ice then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "ice_demon_art_bodhisatva",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args)) 
+end
+end
+end)
 
 spawn(function()
 while task.wait() do
@@ -1490,12 +1555,12 @@ Settings:AddDropdown("Farm Method", {"Above","Below","Behind"}, "Above", false, 
     getgenv().FarmMethod = v
 end)
 
-getgenv().tweenspeed = 10
+getgenv().tweenspeed = 300
 Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 
-getgenv().Distance = 5
+getgenv().Distance = 10
 Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
@@ -2485,9 +2550,44 @@ Farming:AddButton("Spacial Awareness",function()
  Farming:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
-Farming:AddButton("No Stun",function()
-nostun()
+
+Farming:AddToggle("Scythe GodMode", false, function(t)
+getgenv().S = t
 end)
+Farming:AddToggle("Ice GodMode”, false, function(t)
+getgenv().Ice = t
+end)
+
+spawn(function()
+while task.wait()
+if getgenv().S then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "scythe_asteroid_reap",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while task.wait()
+if getgenv().Ice then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "ice_demon_art_bodhisatva",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args)) 
+end
+end
+end)
+
 spawn(function()
 while task.wait() do
 if getgenv().F then
@@ -2527,12 +2627,12 @@ Settings:AddDropdown("Farm Method", {"Above","Below","Behind"}, "Above", false, 
     getgenv().FarmMethod = v
 end)
 
-getgenv().tweenspeed = 10
+getgenv().tweenspeed = 300
 Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 
-getgenv().Distance = 5
+getgenv().Distance = 10
 Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
@@ -2948,402 +3048,3 @@ spawn(function()
         end
     end)
 end)
-
-
-
---Pvp
-elseif game.PlaceId == 9366093452 then
-    local UIS = game:GetService("UserInputService")
-local VirtualUser = game:GetService("VirtualUser")
-local VIM =game:GetService("VirtualInputManager")
-local ReplStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
-local Imput = game:GetService("UserInputService")
-local COREGUI = game:GetService("CoreGui")
-local LP = game:GetService("Players").LocalPlayer
-local HttpService = game:GetService("HttpService")
-local RunS = game:GetService("RunService")
-local X, Y = 0, 0
-local Mouse = LP:GetMouse()
-local GetLocalName = LP.Name
-local request = (syn and syn.request) or (http and http.request) or http_request
-local client = game:GetService("Players").LocalPlayer
-local Plr = game:GetService("Players").LocalPlayer
-local Data = game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name]
-
-
-local function GetHuman()
-    local h = LP.Character
-    h = h and (h:FindFirstChild("Humanoid") or h:FindFirstChildWhichIsA("Humanoid"))
-    return h or workspace.CurrentCamera.CameraSubject
-end
-
-local GramxProjectFloat = tostring(math.random(0, 100000))
-local TweenFloatVelocity = Vector3.new(0,0,0)
-function CreateTweenFloat()
-    local BV = game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild(GramxProjectFloat) or Instance.new("BodyVelocity")
-    BV.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-    BV.Name = GramxProjectFloat
-    BV.MaxForce = Vector3.new(100000, 100000, 100000)
-    BV.Velocity = TweenFloatVelocity
-end
-
-
-local function GetDistance(Endpoint)
-    if typeof(Endpoint) == "Instance" then
-       Endpoint = Vector3.new(Endpoint.Position.X, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y, Endpoint.Position.Z)
-    elseif typeof(Endpoint) == "CFrame" then
-       Endpoint = Vector3.new(Endpoint.Position.X, game.Players.LocalPlayer.Character.HumanoidRootPart.Position.Y, Endpoint.Position.Z)
-    end
-    local Magnitude = (Endpoint - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-    return Magnitude
-end
-
-
-function Tween(Endpoint)
-    if typeof(Endpoint) == "Instance" then
-       Endpoint = Endpoint.CFrame
-    end
-    local TweenFunc = {}
-    local Distance = GetDistance(Endpoint)
-    local TweenInfo = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Distance/getgenv().tweenspeed, Enum.EasingStyle.Linear), {CFrame = Endpoint * CFrame.fromAxisAngle(Vector3.new(1,0,0), math.rad(0))})
-    TweenInfo:Play()
-    function TweenFunc:Cancel()
-       TweenInfo:Cancel()
-       return false
-    end
-    if Distance <= 100 then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Endpoint
-       TweenInfo:Cancel()
-       return false
-    end
-    return TweenFunc
-end
-
-local function SkillBind(bind)
-    pcall(function()
-        VIM:SendKeyEvent(true,bind,false,game)
-        task.wait()
-        VIM:SendKeyEvent(false,bind,false,game)
-        wait(.2)
-    end)
-end
-
-
---Server Hop
-function Hop()
-    local PlaceID = game.PlaceId
-    local AllIDs = {}
-    local foundAnything = ""
-    local actualHour = os.date("!*t").hour
-    local Deleted = false
-    function TPReturner()
-        local Site;
-        if foundAnything == "" then
-            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
-        else
-            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
-        end
-        local ID = ""
-        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
-            foundAnything = Site.nextPageCursor
-        end
-        local num = 0;
-        for i,v in pairs(Site.data) do
-            local Possible = true
-            ID = tostring(v.id)
-            if tonumber(v.maxPlayers) > tonumber(v.playing) then
-                for _,Existing in pairs(AllIDs) do
-                    if num ~= 0 then
-                        if ID == tostring(Existing) then
-                            Possible = false
-                        end
-                    else
-                        if tonumber(actualHour) ~= tonumber(Existing) then
-                            local delFile = pcall(function()
-                                AllIDs = {}
-                                table.insert(AllIDs, actualHour)
-                            end)
-                        end
-                    end
-                    num = num + 1
-                end
-                if Possible == true then
-                    table.insert(AllIDs, ID)
-                    wait()
-                    pcall(function()
-                        wait()
-                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
-                    end)
-                    wait(4)
-                end
-            end
-        end
-    end
-    function Teleport() 
-        while wait() do
-            pcall(function()
-                TPReturner()
-                if foundAnything ~= "" then
-                    TPReturner()
-                end
-            end)
-        end
-    end
-    Teleport()
-end
-
-LPH_JIT_MAX(function() 
-    local oldmt 
-    oldmt = hookmetamethod(game, "__namecall", function(self, ...)
-        if (not checkcaller()) and getnamecallmethod():lower() == "kick" then 
-            return
-        end 
-
-        if getnamecallmethod() == "InvokeServer" and self.Name == "reporthackerasdasd" then 
-            return 
-        end 
-
-        if getnamecallmethod() == "FireServer" and self.Name:match("modd") then 
-            return 
-        end 
-        return oldmt(self, ...)
-    end)
-end)();
-
-
---Ka Settings
-local function attack(method)
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, 919, "ground_slash")
-    game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(method, client, client.Character, client.Character.HumanoidRootPart, client.Character.Humanoid, math.huge, "ground_slash")
-end
-
-local attackMethods = {
-    ["Combat"] = 'fist_combat',
-    ["Sword"] = 'Sword_Combat_Slash',
-    ["Scythe"] = 'Scythe_Combat_Slash',
-    ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_combat_slash'
-}
-
-if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
-    game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        
-        return true 
-    end 
-end 
-
-
-setfflag("HumanoidParallelRemoveNoPhysics", "False")
-setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
-
-
-_G.Color = Color3.fromRGB(255, 255, 255)
-_G.Color2 = Color3.fromRGB(1, 1, 1)
-
-local library = loadstring(game:HttpGet("https://pastebin.com/raw/NZK8HEzF"))()
-local window = library:CreateWindow("BVR Premium | projek sleyeerz lmaooo | ", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("BVR Premium | Projek slayers | {fps} | bug fixes ")
-
-local Main = window:CreateTab("Main")
-local Farming = Main:CreateSector("Farming", 'left')
-local Settings = Main:CreateSector("Settings", "right")
---Other
-local Misc1 = window:CreateTab("Misc")
-local Misc = Misc1:CreateSector("Misc", 'left')
---Credits
-local Cred = window:CreateTab("Credits")
-local Credits = Cred:CreateSector("Credits", 'left')
-
-Credits:AddButton("Join/Copy Discord",function()
-    setclipboard("discord.gg/q8QzqcxRWW")
-    syn.request(
-        {
-            Url = "http://127.0.0.1:6463/rpc?v=1",
-            Method = "POST",
-            Headers = {
-                ["Content-Type"] = "application/json",
-                ["origin"] = "https://discord.com",
-            },
-            Body = game:GetService("HttpService"):JSONEncode(
-                {
-                    ["args"] = {
-                        ["code"] = "q8QzqcxRWW",
-                    },
-                    ["cmd"] = "INVITE_BROWSER",
-                    ["nonce"] = "."
-                })
-        })
-    end)
-
-
-
---Farming
-
-Farming:AddToggle("Kill Aura", false, function(value)
-    getgenv().killaura = value
-end)
-
-Farming:AddToggle("No Cd Moves - Can Kick", false, function(value)
-    getgenv().NoCdMoves = value
-end)
-Farming:AddButton("No Stun",function()
-nostun()
-end)
-
-
---Settings
-
-getgenv().Method = "Sword"
-Settings:AddDropdown("Kill Aura Method", {"Scythe","Sword","Combat","Claw","Fans"}, "Sword", false, function(v)
-    getgenv().Method = v
-end)
-
---Misc
-Misc:AddToggle("Infinite Breathing", false, function(t)
-    getgenv().InfBreathing = t
-end)
-
-Misc:AddToggle("Infinite Stamina", false, function(t)
-    getgenv().InfStamina = t
-end)
-
-Misc:AddSlider("WalkSpeed", 1, 16, 50, 1, function(v)
-    getgenv().WalkSpeedValue = v
-end)
-
-Misc:AddSlider("WalkSpeed", 1, 16, 50, 1, function(v)
-    getgenv().JumpPowerValue = v
-end)
-
-Misc:AddToggle("Enable Walk Speed", false, function(t)
-    getgenv().WalksSpeedEnabled = t
-end)
-
-Misc:AddToggle("Enable Jump Power", false, function(t)
-    getgenv().JumpPowerEnabled = t
-end)
-
-Misc:AddButton("Thunder Mode - Human Only",function()
-    game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
-end)
-
-Misc:AddButton("Ren Mode - Ren/Human Only",function()
-    game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(true)
-end)
-
-Misc:AddButton("God Mode - Kamado Only",function()
-    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
-end)
-
-Misc:AddButton("No Sun Burn - Demon Only",function()
-    pcall(function()
-    game:GetService("Players").LocalPlayer.PlayerScripts["Small_Scripts"].Gameplay["Sun_Damage"].Disabled = true
-end)
-end)
-
-Misc:AddButton("Give All Items",function()
-giveallitems()
-end)
-
-Misc:AddButton("No Stun",function()
-nostun()
-end)
-
---Functions
-
---Inf Breathing/Stam
-spawn(function()
-    while task.wait() do
-        if getgenv().InfStamina then
-            getrenv()._G.AddStamina("gpthebest", 50)
-        end
-    end
-end)
-
-spawn(function()
-    while task.wait() do
-        if getgenv().InfBreathing then
-            getrenv()._G.AddBreath("gpthebest", 50)
-        end
-    end
-end)
-
-
-
--- // Kill Aura \\ -- 
-task.spawn(function()
-    while task.wait() do
-        pcall(function()
-        if killaura then
-            attack(attackMethods[Method])
-            task.wait(2)
-            end
-        end)
-    end
-end)
-
-
---WalkSpeed/JumpPower 
-
-spawn(function()
-    while task.wait() do
-        if getgenv().WalksSpeedEnabled then
-            local h = GetHuman()
-            local oldws = h and h.WalkSpeed
-            if oldws then
-                pcall(function()
-                    h.WalkSpeed = getgenv().WalkSpeedValue or oldws or 16
-                    while task.wait() and getgenv().WalksSpeedEnabled do
-                        h.WalkSpeed = getgenv().WalkSpeedValue or oldws or 16
-                    end
-                end)
-                h.WalkSpeed = oldws or 16
-            end
-        end
-    end
-end)
-
-spawn(function()
-    while task.wait() do
-        if getgenv().JumpPowerEnabled then
-            local h = GetHuman()
-            local oldjp = h and h.JumpPower
-            if oldjp then
-                pcall(function()
-                    h.JumpPower = getgenv().JumpPowerValue or oldjp or 50
-                    while task.wait() and getgenv().JumpPowerEnabled do
-                        h.JumpPower = getgenv().JumpPowerValue or oldjp or 50
-                    end
-                end)
-                h.JumpPower = oldjp or 50
-            end
-        end
-    end
-end)
-
-
-
---No Cooldown Moves
-oldindex = hookmetamethod(game, "__index", function(index, value)
-    if tostring(index) == "LastUsed" and getgenv().NoCdMoves then
-        return 0
-    end
-    return oldindex(index, value)
-end)
-
-end

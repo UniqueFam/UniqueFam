@@ -27,35 +27,6 @@ local a = {"KnockedOut", "Stun", "FakeStun", "carry_ting_asdasd", "RagDoll", "no
     end)
 end
 
-local MapLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/T6kdK0bq"))()
-end)
-
-local ItemLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7fmjAFsP"))()
-end)
-
-local EntityLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/CLtU1aZD"))()
-end)
-
-local MaterialLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7pGTv3Kv"))()
-end)
-
-local Material2LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/F0FNu09V"))()
-end)
-
-local Material3LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/SVdVLNr5"))()
-end)
-
-coroutine.resume(MapLoaderCoroutine)
-coroutine.resume(ItemLoaderCoroutine)
-coroutine.resume(MaterialLoaderCoroutine)
-coroutine.resume(Material2LoaderCoroutine)
-coroutine.resume(Material3LoaderCoroutine)
 
 if game.PlaceId == 5956785391 then
     local CoreGui = game:GetService("StarterGui")
@@ -111,36 +82,6 @@ local function GetDistance(Endpoint)
     local Magnitude = (Endpoint - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
     return Magnitude
 end
-
-local MapLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/T6kdK0bq"))()
-end)
-
-local ItemLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7fmjAFsP"))()
-end)
-
-local EntityLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/CLtU1aZD"))()
-end)
-
-local MaterialLoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7pGTv3Kv"))()
-end)
-
-local Material2LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/F0FNu09V"))()
-end)
-
-local Material3LoaderCoroutine = coroutine.create(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/SVdVLNr5"))()
-end)
-
-coroutine.resume(MapLoaderCoroutine)
-coroutine.resume(ItemLoaderCoroutine)
-coroutine.resume(MaterialLoaderCoroutine)
-coroutine.resume(Material2LoaderCoroutine)
-coroutine.resume(Material3LoaderCoroutine)
 
 
 function Tween(Endpoint)
@@ -422,6 +363,24 @@ Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
+Farming:AddToggle("God Ice", false, function(s)
+    getgenv().Ice = s
+    end)
+
+spawn(function()
+while task.wait() do
+if getgenv().Ice then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "ice_demon_art_bodhisatva",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
 --Settings
 
 getgenv().Method = "Sword"
@@ -692,7 +651,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(2)
+            task.wait(1.8)
             end
         end)
     end

@@ -373,7 +373,7 @@ getgenv().Ice = t
 end)
 
 spawn(function()
-while task.wait()
+while task.wait() do
 if getgenv().S then
 local args = {
     [1] = "skil_ting_asd",
@@ -388,7 +388,7 @@ end
 end)
 
 spawn(function()
-while task.wait()
+while task.wait() do
 if getgenv().Ice then
 local args = {
     [1] = "skil_ting_asd",
@@ -1491,7 +1491,7 @@ getgenv().Ice = t
 end)
 
 spawn(function()
-while task.wait()
+while task.wait() do
 if getgenv().S then
 local args = {
     [1] = "skil_ting_asd",
@@ -1506,7 +1506,7 @@ end
 end)
 
 spawn(function()
-while task.wait()
+while task.wait() do
 if getgenv().Ice then
 local args = {
     [1] = "skil_ting_asd",
@@ -2559,7 +2559,7 @@ getgenv().Ice = t
 end)
 
 spawn(function()
-while task.wait()
+while task.wait() do
 if getgenv().S then
 local args = {
     [1] = "skil_ting_asd",
@@ -2574,7 +2574,7 @@ end
 end)
 
 spawn(function()
-while task.wait()
+while task.wait() do
 if getgenv().Ice then
 local args = {
     [1] = "skil_ting_asd",

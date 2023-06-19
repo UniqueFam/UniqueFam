@@ -280,7 +280,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        task.wait(5)
+        task.wait()
         return true 
     end 
 end 
@@ -361,6 +361,23 @@ end)
 
 Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
+end)
+
+Farming:AddToggle("War fan", false, function(f)
+    getgenv().F = f
+end)
+
+Farming:AddButton("God Mode - Kamado Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
+end)
+
+
+spawn(function()
+while task.wait() do
+if getgenv().F then
+game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
+end
+end
 end)
 
 Farming:AddToggle("God Ice", false, function(s)
@@ -651,7 +668,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(1.8)
+            task.wait(1.7)
             end
         end)
     end
@@ -1356,7 +1373,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        task.wait(5)
+        task.wait()
         return true 
     end 
 end 
@@ -1439,6 +1456,41 @@ Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
+Farming:AddToggle("War fan", false, function(f)
+    getgenv().F = f
+end)
+
+Farming:AddButton("God Mode - Kamado Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
+end)
+
+
+spawn(function()
+while task.wait() do
+if getgenv().F then
+game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
+end
+end
+end)
+
+Farming:AddToggle("God Ice", false, function(s)
+    getgenv().Ice = s
+    end)
+
+spawn(function()
+while task.wait() do
+if getgenv().Ice then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "ice_demon_art_bodhisatva",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
 --Settings
 
 getgenv().Method = "Sword"
@@ -1703,7 +1755,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(2)
+            task.wait(1.7)
             end
         end)
     end
@@ -2356,7 +2408,7 @@ local attackMethods = {
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
     game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping").OnClientInvoke = function() 
-        task.wait(5)
+        task.wait()
         return true 
     end 
 end 
@@ -2424,7 +2476,41 @@ end)
 Farming:AddToggle("No Cd Moves - Can Kick", false, function(value)
     getgenv().NoCdMoves = value
 end)
+Farming:AddToggle("War fan", false, function(f)
+    getgenv().F = f
+end)
 
+Farming:AddButton("God Mode - Kamado Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
+end)
+
+
+spawn(function()
+while task.wait() do
+if getgenv().F then
+game:GetService("ReplicatedStorage").Remotes.war_Drums_remote:FireServer(true)
+end
+end
+end)
+
+Farming:AddToggle("God Ice", false, function(s)
+    getgenv().Ice = s
+    end)
+
+spawn(function()
+while task.wait() do
+if getgenv().Ice then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "ice_demon_art_bodhisatva",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
 
 --Settings
 
@@ -2571,7 +2657,7 @@ task.spawn(function()
         pcall(function()
         if killaura then
             attack(attackMethods[Method])
-            task.wait(2)
+            task.wait(1.7)
             end
         end)
     end

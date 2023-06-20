@@ -28,7 +28,7 @@ local Main = Win:Tab("• Main", "rbxassetid://8825667942")
 local Home = Win:Tab("• Home", nil)
 local Game = Win:Tab("• Game", nil)
 -- Section --
-local Main_1 = Main:NewSection("KA"))
+local Main_1 = Main:NewSection("Main")
 local Home_1 = Home:NewSection("")
 local Game_1 = Game:NewSection("")
 

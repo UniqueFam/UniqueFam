@@ -325,39 +325,39 @@ local Gourds = Home:NewSection("gourd")
 local Misc = Game:NewSection("meh")
 local Settings = Main:NewSection("settings")
 --Farming
-Farming:Dropdown("Dropdown", BossessTable, '', function(value)
+Farming:Dropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value
 end)
 
-Farming:Toggle("Farm Selected Boss", function(value)
+Farming:Toggle("Farm Selected Boss", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
-Farming:Toggle("Farm All Bosses", function(value)
+Farming:Toggle("Farm All Bosses", false, function(value)
     getgenv().AllBosses = value
 end)
 
-Farming:Toggle("Auto Collect Chest", function(value)
+Farming:Toggle("Auto Collect Chest", false, function(value)
     getgenv().AutoCollectChest = value
 end)
 
-Farming:Toggle("Kill Aura", function(value)
+Farming:Toggle("Kill Aura", false, function(value)
     getgenv().killaura = value
 end)
 
-Farming:Toggle("Auto Block - No Skills", function(value)
+Farming:Toggle("Auto Block - No Skills", fasle, function(value)
     getgenv().AB = value
 end)
 
-Farming:Toggle("No Cd Moves - Can Kick", function(value)
+Farming:Toggle("No Cd Moves - Can Kick", false, function(value)
     getgenv().NoCdMoves = value
 end)
 
-Farming:Toggle("Auto Eat Souls - Demons", function(value)
+Farming:Toggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
-Farming:Toggle("War fan", function(f)
+Farming:Toggle("War fan", false, function(f)
     getgenv().F = f
 end)
 
@@ -374,7 +374,7 @@ end
 end
 end)
 
-Farming:Toggle("God Ice", function(s)
+Farming:Toggle("God Ice", false, function(s)
     getgenv().Ice = s
     end)
 
@@ -405,7 +405,7 @@ Settings:Dropdown("Farm Method", {"Above","Below","Behind"}, "Above", function(v
 end)
 
 getgenv().tweenspeed = 10
-Settings:Slider("Tween Speed", 100, 100, 300, 1, function(self)
+Settings:Slider("Tween Speed", 100, 200, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 

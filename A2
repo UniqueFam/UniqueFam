@@ -665,10 +665,9 @@ spawn(function()
 end)
 
 -- // Kill Aura \\ -- 
-task.spawn(function()
+spawn(function()
     while task.wait() do
-        pcall(function()
-        if killaura then
+        if getgenv().killaura then
             attack(attackMethods[Method])
             task.wait(1.9)
             end

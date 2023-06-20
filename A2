@@ -271,11 +271,11 @@ local function attack(method)
 end
 
 local attackMethods = {
-    ["Combat"] = 'fist_combat',
-    ["Sword"] = 'Sword_Combat_Slash',
-    ["Scythe"] = 'Scythe_Combat_Slash',
-    ["Claw"] = 'claw_Combat_Slash',
-    ["Fans"] = 'fans_combat_slash'
+    ["Combat"] = "fist_combat",
+    ["Sword"] = "Sword_Combat_Slash",
+    ["Scythe"] = "Scythe_Combat_Slash",
+    ["Claw"] = "claw_Combat_Slash",
+    ["Fans"] = "fans_combat_slash"
 }
 
 if game.ReplicatedStorage:FindFirstChild("Remotes"):FindFirstChild("getclientping") then 
@@ -419,36 +419,36 @@ Skills:Toggle("Use Skills", function(t)
 end)
 
 
-Skills:AddToggle("Z", false, function(t)
+Skills:Toggle("Z", false, function(t)
     getgenv().Z = t
 end)
 
 
-Skills:AddToggle("X", false, function(t)
+Skills:Toggle("X", false, function(t)
     getgenv().X = t
 end)
 
 
-Skills:AddToggle("C", false, function(t)
+Skills:Toggle("C", false, function(t)
     getgenv().C = t
 end)
 
-Skills:AddToggle("V", false, function(t)
+Skills:Toggle("V", false, function(t)
     getgenv().V = t
 end)
 
-Skills:AddToggle("B", false, function(t)
+Skills:Toggle("B", false, function(t)
     getgenv().B = t
 end)
 
-Skills:AddToggle("N", false, function(t)
+Skills:Toggle("N", false, function(t)
     getgenv().N = t
 end)
 
 
 --Player
-local breathingProg = Misc:AddLabel("Breathing Progress : ".. math.floor((game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].BreathingProgress[1].Value / game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].BreathingProgress[2].Value) * 100) .. '%')
-local DemonProg = Misc:AddLabel("Demon Progress : ".. math.floor((game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].DemonProgress[1].Value / game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].DemonProgress[2].Value) * 100) .. '%')
+local breathingProg = Misc:Label("Breathing Progress : ".. math.floor((game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].BreathingProgress[1].Value / game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].BreathingProgress[2].Value) * 100) .. '%')
+local DemonProg = Misc:Label("Demon Progress : ".. math.floor((game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].DemonProgress[1].Value / game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].DemonProgress[2].Value) * 100) .. '%')
 --Demon Update
 local function DemonProgRe()
     DemonProg:Set("Demon Progress : " .. math.floor((game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].DemonProgress[1].Value / game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].DemonProgress[2].Value) * 100) .. '%')
@@ -460,110 +460,108 @@ local function BreathingRe()
 end
 game:GetService("ReplicatedStorage")["Player_Data"][game.Players.LocalPlayer.Name].BreathingProgress[1].Changed:Connect(BreathingRe)
 
-Misc:AddToggle("Lag Server", false, function(t)
+Misc:Toggle("Lag Server", false, function(t)
     getgenv().ServLagger = t
 end)
 
-Misc:AddToggle("Infinite Breathing", false, function(t)
+Misc:Toggle("Infinite Breathing", false, function(t)
     getgenv().InfBreathing = t
 end)
 
-Misc:AddToggle("Infinite Stamina", false, function(t)
+Misc:Toggle("Infinite Stamina", false, function(t)
     getgenv().InfStamina = t
 end)
 
-Misc:AddToggle("No Drown", false, function(t)
+Misc:Toggle("No Drown", false, function(t)
     getgenv().NoDrown = t
 end)
 
-Misc:AddSlider("WalkSpeed", 1, 16, 500, 1, function(v)
+Misc:Slider("WalkSpeed", 1, 16, 500, 1, function(v)
     getgenv().WalkSpeedValue = v
 end)
 
-Misc:AddSlider("JumpPower", 1, 50, 500, 1, function(v)
+Misc:Slider("JumpPower", 1, 50, 500, 1, function(v)
     getgenv().JumpPowerValue = v
 end)
 
-Misc:AddToggle("Enable Walk Speed", false, function(t)
+Misc:Toggle("Enable Walk Speed", false, function(t)
     getgenv().WalksSpeedEnabled = t
 end)
 
-Misc:AddToggle("Enable Jump Power", false, function(t)
+Misc:Toggle("Enable Jump Power", false, function(t)
     getgenv().JumpPowerEnabled = t
 end)
 
-Misc:AddToggle("Auto Meditate", false, function(t)
+Misc:Toggle("Auto Meditate", false, function(t)
     getgenv().AutoMed = t
 end)
 
-Misc:AddToggle("Auto Split Boulder", false, function(t)
+Misc:Toggle("Auto Split Boulder", false, function(t)
     getgenv().AutoSplit = t
 end)
 
-Misc:AddButton("Thunder Mode - Human Only",function()
+Misc:Button("Thunder Mode - Human Only",function()
     game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
 end)
 
-Misc:AddButton("Ren Mode - Ren/Human Only",function()
+Misc:Button("Ren Mode - Ren/Human Only",function()
     game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(true)
 end)
 
-Misc:AddButton("God Mode - Kamado Only",function()
+Misc:Button("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
 
-Misc:AddButton("No Sun Burn - Demon Only",function()
+Misc:Button("No Sun Burn - Demon Only",function()
     pcall(function()
     game:GetService("Players").LocalPlayer.PlayerScripts["Small_Scripts"].Gameplay["Sun_Damage"].Disabled = true
 end)
 end)
 
-Misc:AddButton("Give All Items",function()
-giveallitems()
-end)
 
-Misc:AddButton("No Stun",function()
+
+Misc:Button("No Stun",function()
 nostun()
 end)
 --Gourds
 
-Gourds:AddDropdown("Select Gourd", {"Small Gourd","Medium Gourd","Big Gourd"}, "Gourd", false, function(v)
+Gourds:Dropdown("Select Gourd", {"Small Gourd","Medium Gourd","Big Gourd"}, "Gourd", false, function(v)
     getgenv().Gourd = v
 end)
 
-Gourds:AddToggle("Auto Blow", false, function(v)
+Gourds:Toggle("Auto Blow", false, function(v)
     getgenv().AutoGourd = v
 end)
 
 --Teleports
-Teleports:AddDropdown("Trainers", {"Wind Trainer","Thunder Trainer","Water Trainer","Insect Trainer"}, "Trainer", false, function(v)
+Teleports:Dropdown("Trainers", {"Wind Trainer","Thunder Trainer","Water Trainer","Insect Trainer"}, "Trainer", false, function(v)
     getgenv().TrainerSelected = v
 end)
 
-Teleports:AddDropdown("Village", {"Zapiwara Mountain","Waroru Cave","Slasher Demon","Ushumaru Village","Ouwbayashi Home","Kabiwaru Village","Zapiwara Cave","Dangerous Woods","Final Selection","Kiribating Village","Butterfly Mansion","Abubu Cave"}, "Village", false, function(v)
+Teleports:Dropdown("Village", {"Zapiwara Mountain","Waroru Cave","Slasher Demon","Ushumaru Village","Ouwbayashi Home","Kabiwaru Village","Zapiwara Cave","Dangerous Woods","Final Selection","Kiribating Village","Butterfly Mansion","Abubu Cave"}, "Village", false, function(v)
     getgenv().AreaSelected = v
 end)
 
-Teleports:AddToggle("TP To Selected Village", false, function(v)
+Teleports:Toggle("TP To Selected Village", false, function(v)
     getgenv().TPtoVillage = v
 end)
 
-Teleports:AddToggle("TP To Selected Trainer", false, function(v)
+Teleports:Toggle("TP To Selected Trainer", false, function(v)
     getgenv().TPtoTrainer = v
 end)
 
-Teleports:AddButton("Goto Muzan",function(x)
+Teleports:Button("Goto Muzan",function(x)
     getgenv().GotoMuzan = x
     pcall(function()
     Tween(CFrame.new(game:GetService("Workspace").Muzan.SpawnPos.Value))
     end)
 end)
 
-Teleports:AddButton("Server Hop",function()
+Teleports:Button("Server Hop",function()
 Hop()
 end)
 
-Teleports:AddButton("Hop To Low Player Server",function()
+Teleports:Button("Hop To Low Player Server",function()
     getgenv().AutoTeleport = true
     getgenv().DontTeleportTheSameNumber = true 
     getgenv().CopytoClipboard = false
@@ -610,7 +608,7 @@ Teleports:AddButton("Hop To Low Player Server",function()
     end
 end)
 
-Teleports:AddButton("Rejoin",function()
+Teleports:Button("Rejoin",function()
     game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
 

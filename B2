@@ -327,12 +327,6 @@ local Skills = Game:NewSection("Test")
 local Misc = Home:NewSection("Test")
 local Gourds = Game:NewSection("Test")
 local Teleports = Game:NewSection("Test")
---Other
-local Misc1 = Main:Tab("Misc")
-local Misc = Farming:Tab("Misc")
-local Gourds = Setting:Tab("Gourd")
-local Teleports = Setting:Tab("Teleports")
-
 --Farming
 Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value

@@ -318,10 +318,12 @@ local Win = Blacklib:Window("Gui")
 local Main = Win:Tab("• Main", "rbxassetid://8825667942")
 local Home = Win:Tab("• Home", nil)
 local Game = Win:Tab("• Game", nil)
+local Stuff = Win:Tab(" Misc", nil)
 -- Section --
-local Farming = Main:NewSection("")
-local Skills = Home:NewSection("")
-local Misc = Game:NewSection("")
+local Farming = Main:NewSection("Autofarm")
+local Gourds = Home:NewSection("gourd")
+local Misc = Game:NewSection("meh")
+local Settings = Main:NewSection("settings")
 --Farming
 Farming:Dropdown("Dropdown", BossessTable, '', function(value)
     getgenv().SelectedBoss = value
@@ -393,26 +395,26 @@ end)
 --Settings
 
 getgenv().Method = "Sword"
-Settings:AddDropdown("Kill Aura Method", {"Scythe","Sword","Combat","Claw","Fans"}, "Sword", false, function(v)
+Settings:Dropdown("Kill Aura Method", {"Scythe","Sword","Combat","Claw","Fans"}, "Sword", function(v)
     getgenv().Method = v
 end)
 
 getgenv().FarmMethod = "Above"
-Settings:AddDropdown("Farm Method", {"Above","Below","Behind"}, "Above", false, function(v)
+Settings:Dropdown("Farm Method", {"Above","Below","Behind"}, "Above", function(v)
     getgenv().FarmMethod = v
 end)
 
 getgenv().tweenspeed = 10
-Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
+Settings:Slider("Tween Speed", 100, 100, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
+Settings:Slider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
-Skills:AddToggle("Use Skills", false, function(t)
+Skills:Toggle("Use Skills", function(t)
     getgenv().AutoUseSkills = t
 end)
 

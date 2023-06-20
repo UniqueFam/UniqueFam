@@ -316,17 +316,19 @@ local Blacklib = loadstring(game:HttpGet('https://raw.githubusercontent.com/kick
 local Win = Blacklib:Window("Gui")
 
 local Main = Win:Tab("Main", "rbxassetid://8825667942")
-local Farmin = Win:Tab("Farming", nil)
-local Setting = Win:Tab("Settings", nil)
-local Skill = Win:Tab("Skills", nil)
-
+local Farming = Win:Tab("Farming", nil)
+local Settings = Win:Tab("Settings", nil)
+local Skills = Win:Tab("Skills", nil)
+local Misc = Win:Tab("Misc", nil)
+local Gourds = Win:Tab("Gourds", nil)
+local Teleports = Win:Tab("Teleports", nil)
 -- Section --
-local Farmin = Main:NewSection("Farming")
-local Settings = Home:NewSection("Test")
-local Skills = Game:NewSection("Test")
-local Misc = Home:NewSection("Test")
-local Gourds = Game:NewSection("Test")
-local Teleports = Game:NewSection("Test")
+local Farming = Main:NewSection("Farming")
+local Settings = Home:NewSection("Settings")
+local Skills = Game:NewSection("Skills")
+local Misc = Misc:NewSection("Misc")
+local Gourds = Gourds:NewSection("Gourd")
+local Teleports = Teleports:NewSection("Teleport")
 --Farming
 Farming:Dropdown("Dropdown", BossessTable, '', function(value)
     getgenv().SelectedBoss = value

@@ -328,43 +328,43 @@ local Misc = Home:NewSection("Test")
 local Gourds = Game:NewSection("Test")
 local Teleports = Game:NewSection("Test")
 --Farming
-Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
+Farming:Dropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value
 end)
 
-Farming:AddToggle("Farm Selected Boss", false, function(value)
+Farming:Toggle("Farm Selected Boss", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
-Farming:AddToggle("Farm All Bosses", false, function(value)
+Farming:Toggle("Farm All Bosses", false, function(value)
     getgenv().AllBosses = value
 end)
 
-Farming:AddToggle("Auto Collect Chest", false, function(value)
+Farming:Toggle("Auto Collect Chest", false, function(value)
     getgenv().AutoCollectChest = value
 end)
 
-Farming:AddToggle("Kill Aura", false, function(value)
+Farming:Toggle("Kill Aura", false, function(value)
     getgenv().killaura = value
 end)
 
-Farming:AddToggle("Auto Block - No Skills", false, function(value)
+Farming:Toggle("Auto Block - No Skills", false, function(value)
     getgenv().AB = value
 end)
 
-Farming:AddToggle("No Cd Moves - Can Kick", false, function(value)
+Farming:Toggle("No Cd Moves - Can Kick", false, function(value)
     getgenv().NoCdMoves = value
 end)
 
-Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
+Farming:Toggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
-Farming:AddToggle("War fan", false, function(f)
+Farming:Toggle("War fan", false, function(f)
     getgenv().F = f
 end)
 
-Farming:AddButton("God Mode - Kamado Only",function()
+Farming:Button("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
 
@@ -377,7 +377,7 @@ end
 end
 end)
 
-Farming:AddToggle("God Ice", false, function(s)
+Farming:Toggle("God Ice", false, function(s)
     getgenv().Ice = s
     end)
 

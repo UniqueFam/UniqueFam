@@ -394,21 +394,22 @@ end
 end)
 --Settings
 
+getgenv().Method = "Sword"
 Settings:Dropdown("Kill Aura Method", {"Scythe","Sword","Combat","Claw","Fans"}, "Sword", function(v)
     getgenv().Method = v
 end)
 
-
+getgenv().FarmMethod = "above"
 Settings:Dropdown("Farm Method", {"Above","Below","Behind"}, "Above", function(v)
     getgenv().FarmMethod = v
 end)
 
-
+getgenv().tweenspeed = 10
 Settings:Slider("Tween Speed", 1, 100, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 
-
+getgenv().Distance = 5
 Settings:Slider("Farm Distance", 1, 5, 10, 1, function(self)
     getgenv().Distance = self
 end)
@@ -664,11 +665,11 @@ spawn(function()
 end)
 
 -- // Kill Aura \\ -- 
-spawn(function()
-    while task.wait() do
+task.spawn(function()
+    while task.wait(1.9) do
         if killaura then
             attack(attackMethods[Method])
-            task.wait(1.9)
+        
             end
         end)
     end

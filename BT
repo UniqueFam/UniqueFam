@@ -286,6 +286,9 @@ end
 setfflag("HumanoidParallelRemoveNoPhysics", "False")
 setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 
+Main_1:Line()
+Main_1:Label("Label")
+
 Main_1:Button("Button", function()
 end)
 

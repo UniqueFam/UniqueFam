@@ -294,8 +294,7 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/NZK8HEzF"))()
-local window = library:CreateWindow("BVR Premium | Sex Lovers | ", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("BVR Premium | Sex Lovers | {fps} | DM NORX FOR FREE BVR PREMIUm ")
+local window = library:CreateWindow("Fam", Enum.KeyCode.RightControl)
 
 local Main = window:CreateTab("Main")
 local Farming = Main:CreateSector("Farming", 'left')
@@ -1397,8 +1396,8 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/NZK8HEzF"))()
-local window = library:CreateWindow("BVR Premium | projek sleyeerz lmaooo | ", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("BVR Premium | Projek slayers | {fps} | bug fixes ")
+local window = library:CreateWindow("Fam ", Enum.KeyCode.RightControl)
+
 
 local Main = window:CreateTab("Main")
 local Farming = Main:CreateSector("Farming", 'left')
@@ -2442,8 +2441,7 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/NZK8HEzF"))()
-local window = library:CreateWindow("BVR Premium | projek sleyeerz lmaooo | ", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("BVR Premium | Projek slayers | {fps} | bug fixes ")
+local window = library:CreateWindow("Fam ", Enum.KeyCode.RightControl)
 
 local Main = window:CreateTab("Main")
 local Farming = Main:CreateSector("Farming", 'left')

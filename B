@@ -294,41 +294,17 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/kickTh/New-Ui/main/BlackTrap_Gui_V1.3.txt'))()
-local window = library:CreateWindow("Fam
+local window = library:CreateWindow("Fam")
 
 local Main = window:CreateTab("Main")
-local Farming = Main:CreateSector("Farming", 'left')
-local Settings = Main:CreateSector("Settings", "right")
-local Skills = Main:CreateSector("Skills", "right")
+local Farming = Main:CreateSector("Farming")
+local Settings = Main:CreateSector("Settings")
+local Skills = Main:CreateSector("Skills")
 --Other
 local Misc1 = window:CreateTab("Misc")
-local Misc = Misc1:CreateSector("Misc", 'left')
-local Gourds = Misc1:CreateSector("Gourd", "right")
-local Teleports = Misc1:CreateSector("Teleports", "right")
---Credits
-local Cred = window:CreateTab("Credits")
-local Credits = Cred:CreateSector("Credits", 'left')
-
-Credits:AddButton("Join/Copy Discord",function()
-    setclipboard("discord.gg/q8QzqcxRWW")
-    syn.request(
-        {
-            Url = "http://127.0.0.1:6463/rpc?v=1",
-            Method = "POST",
-            Headers = {
-                ["Content-Type"] = "application/json",
-                ["origin"] = "https://discord.com",
-            },
-            Body = game:GetService("HttpService"):JSONEncode(
-                {
-                    ["args"] = {
-                        ["code"] = "q8QzqcxRWW",
-                    },
-                    ["cmd"] = "INVITE_BROWSER",
-                    ["nonce"] = "."
-                })
-        })
-    end)
+local Misc = Misc1:CreateSector("Misc")
+local Gourds = Misc1:CreateSector("Gourd")
+local Teleports = Misc1:CreateSector("Teleports")
 --Farming
 Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value

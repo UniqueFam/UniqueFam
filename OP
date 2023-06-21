@@ -397,6 +397,13 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
 end
 end
 end)
+Farming:AddButton("Thunder Mode - Human Only",function()
+    game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
+end)
+
+Farming:AddButton("Ren Mode - Ren/Human Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(true)
+end)
 --Settings
 
 getgenv().Method = "Sword"
@@ -1500,6 +1507,13 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
 end
 end
 end)
+Farming:AddButton("Thunder Mode - Human Only",function()
+    game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
+end)
+
+Farming:AddButton("Ren Mode - Ren/Human Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(true)
+end)
 --Settings
 
 getgenv().Method = "Sword"
@@ -2528,7 +2542,13 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
 end
 end
 end)
+Farming:AddButton("Thunder Mode - Human Only",function()
+    game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
+end)
 
+Farming:AddButton("Ren Mode - Ren/Human Only",function()
+    game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(true)
+end)
 --Settings
 
 getgenv().Method = "Sword"

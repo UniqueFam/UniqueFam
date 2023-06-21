@@ -383,6 +383,7 @@ Farming:AddToggle("God Ice", false, function(s)
     getgenv().Ice = s
     end)
 
+
 spawn(function()
 while task.wait() do
 if getgenv().Ice then
@@ -397,6 +398,26 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
 end
 end
 end)
+
+Farming:AddToggle("God Scythe", false, function(s)
+   getgenv().S = s
+end)
+spawn(function()
+while task.wait() do
+if getgenv().S then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "scythe_asteroid_reap",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
+
 Farming:AddButton("Thunder Mode - Human Only",function()
     game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
 end)
@@ -1507,6 +1528,25 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
 end
 end
 end)
+
+Farming:AddToggle("God Scythe", false, function(s)
+   getgenv().S = s
+end)
+spawn(function()
+while task.wait() do
+if getgenv().S then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "scythe_asteroid_reap",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
 Farming:AddButton("Thunder Mode - Human Only",function()
     game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
 end)
@@ -2542,6 +2582,25 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
 end
 end
 end)
+
+Farming:AddToggle("God Scythe", false, function(s)
+   getgenv().S = s
+end)
+spawn(function()
+while task.wait() do
+if getgenv().S then
+local args = {
+    [1] = "skil_ting_asd",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = "scythe_asteroid_reap",
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
 Farming:AddButton("Thunder Mode - Human Only",function()
     game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(true)
 end)

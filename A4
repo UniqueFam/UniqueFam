@@ -75,7 +75,7 @@ end
 end)
 
 spawn(function()
-while task.wait(0.2) do
+while task.wait(0.35) do
 if getgenv().T then
 local args = {
     [1] = "claw_Combat_Slash",

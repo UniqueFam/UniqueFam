@@ -42,7 +42,8 @@ Main_1:Button("Button", function()
 end)
 
 
-Main_1:Toggle("Toggle", function()
+Farming:Toggle("Kill aura", false, function(t)
+getgenv().T = t
 end)
 Main_1:TextBox("Text Box", "Enter", function()
 end)
@@ -147,6 +148,24 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+end
+end
+end)
+
+spawn(function()
+while T == true do
+local args = {
+    [1] = "claw_Combat_Slash",
+    [2] = game:GetService("Players").LocalPlayer,
+    [3] = game:GetService("Players").LocalPlayer.Character,
+    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [6] = math.huge,
+    [7] = "ground_slash"
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
+wait(0.17)
 end
 end
 end)

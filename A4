@@ -75,19 +75,8 @@ end
 end)
 
 spawn(function()
-while task.wait(0.35) do
+while task.wait(0.18) do
 if getgenv().T then
-local args = {
-    [1] = "claw_Combat_Slash",
-    [2] = game:GetService("Players").LocalPlayer,
-    [3] = game:GetService("Players").LocalPlayer.Character,
-    [4] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [5] = game:GetService("Players").LocalPlayer.Character.Humanoid,
-    [6] = math.huge,
-    [7] = "ground_slash"
-}
-
-game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(unpack(args))
 local args = {
     [1] = "claw_Combat_Slash",
     [2] = game:GetService("Players").LocalPlayer,

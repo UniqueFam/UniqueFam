@@ -852,7 +852,7 @@ function bypass()
 
                 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(ohString1, ohInstance2, ohString3, ohNumber4)
 
-                wait()
+                wait(8)
             end
         end
 

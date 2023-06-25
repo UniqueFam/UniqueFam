@@ -312,6 +312,159 @@ local Window = Rayfield:CreateWindow({
 local Main = Window:CreateTab("Main")
 local Misc = Window:CreateTab("Misc")
 local arrow = Window:CreateTab("OP Auras")
+local AutoOrb = Window:CreateTab("Orb")
+
+
+
+AutoOrb:CreateToggle({
+    Name = "Orb StaminaRegen",
+    Callback = function (v)
+        _G.regenstamina = v
+        regenstaminaa()
+    end
+})
+
+AutoOrb:CreateToggle({
+    Name = "Orb InstaKill",
+    Callback = function (v)
+        _G.instakir = v
+        instakilll()
+    end
+})
+
+AutoOrb:CreateToggle({
+    Name = "Orb Blood Money",
+    Callback = function (v)
+        _G.bloodporra = v
+        bloodporraa()
+    end
+})
+
+AutoOrb:CreateToggle({
+    Name = "Orb Health Regen",
+    Callback = function (v)
+        _G.regencu = v
+        reggencuu()
+    end
+})
+
+AutoOrb:CreateToggle({
+    Name = "Orb Double Points",
+    Callback = function (v)
+        _G.dablesperma = v
+        dablespermaa()
+    end
+})
+
+
+
+function regenstaminaa()
+    if _G.regenstamina then
+        locall = true
+    else
+        locall = false
+    end
+
+    while locall do
+        local success, erro = pcall(function ()
+            
+    local targetObject = game:GetService("Workspace").Map.StaminaRegen.Sphere
+    local myObject = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+    if targetObject and myObject then
+        local targetCFrame = myObject.CFrame
+        targetObject.CFrame = targetCFrame
+    end
+
+        end)
+        wait(1)
+    end
+end
+
+function instakilll()
+    if _G.instakir then
+        locall2 = true
+    else
+        locall2 = false
+    end
+
+    while locall2 do
+        local success, erro = pcall(function ()
+        local targetObject = game:GetService("Workspace").Map.InstaKill["Sphere.003"]
+        local myObject = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+        if targetObject and myObject then
+            local targetCFrame = myObject.CFrame
+            targetObject.CFrame = targetCFrame
+        end
+        end)
+        wait(1)
+    end
+end
+
+function bloodporraa()
+    if _G.bloodporra then
+        locall3 = true
+    else
+        locall3 = false
+    end
+
+    while locall3 do
+        local success, erro = pcall(function ()
+            local targetObject = game:GetService("Workspace").Map.BloodMoney["Sphere.009"]
+            local myObject = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+            
+            if targetObject and myObject then
+                local targetCFrame = myObject.CFrame
+                targetObject.CFrame = targetCFrame
+            end
+        end)
+        wait(1)
+    end
+end
+
+function reggencuu()
+    if _G.regencu then
+        locall4 = true
+    else
+        locall4 = false
+    end
+
+    while locall4 do
+        local success, erro = pcall(function ()
+            local targetObject = game:GetService("Workspace").Map.HealthRegen["Sphere.007"]
+            local myObject = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+            
+            if targetObject and myObject then
+                local targetCFrame = myObject.CFrame
+                targetObject.CFrame = targetCFrame
+            end
+        end)
+        wait(1)
+    end
+end
+
+function dablespermaa()
+    if _G.dablesperma then
+        locall5 = true
+    else
+        locall5 = false
+    end
+
+    while locall5 do
+        local success, erro = pcall(function ()
+            local targetObject = game:GetService("Workspace").Map.DoublePoints["Sphere.012"]
+            local myObject = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+            
+            if targetObject and myObject then
+                local targetCFrame = myObject.CFrame
+                targetObject.CFrame = targetCFrame
+            end
+        end)
+        wait(1)
+    end
+end
+
 
 Misc:CreateToggle({
     Name = "Inf Block",
@@ -1547,35 +1700,6 @@ function arrowglobal()
     end
 end
 
-function arrowglobal()
-    if _G.arrowka then 
-        globalkill = true
-    else
-        globalkill = false
-    end
-
-    while globalkill do
-        local success, error = pcall(function()
-            local ohString1 = "arrow_knock_back_damage"
-            local ohInstance2 = game:GetService("Players").LocalPlayer
-            local ohCFrame3 = CFrame.new(2774.44531, 674.729919, -832.578796, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-            local ohInstance4 = findMob1()
-            local ohNumber5 = 999999999
-            local ohNumber6 = 999999999
-
-            game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S_:InvokeServer(ohString1, ohInstance2, ohCFrame3, ohInstance4, ohNumber5, ohNumber6)
-        end)
-
-        if not success then
-        end
-
-        if someCondition then
-            isRunning = false
-        end
-
-        wait()
-    end
-end
 
 function bypass()
     if _G.bypass then

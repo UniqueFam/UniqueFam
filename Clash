@@ -1,0 +1,114 @@
+getgenv().T = true
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.FamiliarYeti391vsEnmu.FamiliarYeti391,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.Trollage_evsEnmu.Trollage_e,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.Patrick10k100kvsEnmu.Patrick10k100k,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.Unknown_FamsvsEnmu.Unknown_Fams,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.nickjkninjavsEnmu.nickjkninja,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.Mrhelperishere2vsEnmu. Mrhelperishere2,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.Rhino_daBossvsEnmu.Rhino_daBoss,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.xxxthe_towersxxxvsEnmu.xxxthe_towersxxx,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)
+spawn(function()
+while T == true do
+local args = {
+    [1] = "Change_Value",
+    [2] = workspace.Debree.clash_folder.ArchSTWvsEnmu.ArchSTW,
+    [3] = 100
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+wait()
+end
+end)

@@ -974,7 +974,7 @@ arrow:CreateToggle({
     end
 })
 
-Misc:CreateToggle({
+arrow:CreateToggle({
     Name = "Thunder KA",
     CurrentValue = false,
     Callback = function(v)

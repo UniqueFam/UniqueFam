@@ -412,7 +412,7 @@ local function attackLoop()
         local ohNumber5 = 999999999
         local ohNumber6 = 999999999
 
-        local mob = findBoss() -- Encontra o NPC mais próximo
+        local mob = findMob1() -- Encontra o NPC mais próximo
         if mob and mob:FindFirstChild("HumanoidRootPart") then
             ohInstance4 = mob -- Armazena o NPC mais próximo na variável
             local ohCFrame3 = mob.HumanoidRootPart.CFrame -- Obtém o CFrame do NPC mais próximo

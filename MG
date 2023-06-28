@@ -966,7 +966,7 @@ function bypass()
         end
 
 
-Misc:CreateToggle({
+arrow:CreateToggle({
     Name = "Thunder Bypass",
     Callback = function(v)
         _G.thunderbypass = v
@@ -1026,7 +1026,7 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
             isRunning = false
         end
 
-        wait(0.65)
+        wait()
     end
 end
         

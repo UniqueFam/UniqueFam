@@ -2387,7 +2387,7 @@ local ohString3 = "Thunderbreathingrapidslashes"
 local ohNumber4 = 5
 
 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(ohString1, ohInstance2, ohString3, ohNumber4)
-        wait(8)
+        wait(6)
     end
 end
 
@@ -2416,7 +2416,7 @@ game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireSer
             isRunning = false
         end
 
-        wait(0.55)
+        wait(0.1)
     end
 end
 

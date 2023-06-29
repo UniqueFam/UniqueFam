@@ -163,6 +163,7 @@ end
 local Main = Window:CreateTab("Main")
 local killauraTab = Window:CreateTab("KillAura")
 local Misc = Window:CreateTab("Misc")
+local AutoOrb = Window:CreateTab("AutoOrb")
 
 local Method = Main:CreateDropdown({
     Name = "Farm Method",

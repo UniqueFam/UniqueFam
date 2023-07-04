@@ -37,8 +37,8 @@ function Intro()
     local ohTable1 = {
     ["Profile_Image"] = "https://www.roblox.com/asset-thumbnail/image?assetId=" .. selectedAssetID .. "&width=420&height=420&format=png",
         ["Text"] = "<AnimateStepFrequency=3><AnimateStepTime=.0005><TextScale=.5><AnimateStyle=Fade>Universe Hub Loading<AnimateStyle=/><TextScale=/><AnimateStepTime=/><AnimateStepFrequency=/>",
-        ["Additional_Text"] = "Welcome to the Universe Hub!",
-        ["Duration"] = 4,
+        ["Additional_Text"] = "Fam Welcomed you!",
+        ["Duration"] = 0,
         ["custom_image_size"] = UDim2.new(1.1, 0, 1.1, 0)
     }
     
@@ -588,7 +588,7 @@ local function attackLoop()
             ohInstance4 = mob -- Armazena o NPC mais próximo na variável
             local ohCFrame3 = mob.HumanoidRootPart.CFrame -- Obtém o CFrame do NPC mais próximo
 
-            for i = 1, 2 do
+            for i = 1, 1 do
                 game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(ohString1, ohInstance2, ohCFrame3, ohInstance4, ohNumber5, ohNumber6)
             end
         end

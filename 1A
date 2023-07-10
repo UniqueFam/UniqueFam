@@ -362,7 +362,7 @@ local Misc = Window:CreateTab("Misc")
 local Bypasses = Window:CreateTab("Bypass")
 local arrow = Window:CreateTab("OP Auras")
 local AutoOrb = Window:CreateTab("Auto ORB")
-
+local misc = Window:CreateTab("Test")
 local Button = Misc:CreateButton({
    Name = "FPS Boost",
    Callback = function()
@@ -468,6 +468,17 @@ Misc:CreateToggle({
     end
 })
 
+misc:CreateDropdown('SelectClan', {
+    Values = { 'Kamado', 'Uzui', 'Tsugikuni', 'Rengoku', 'Kibutsuji', 'Agatsuma', 'Tomioka', 'Tokito', 'Hashibira', 'Soyama', 'Shinazugawa', 'Kocho', 'Sabito', 'Tamayo', 'Kuwajima', 'Makamo' },
+    Default = 1, -- number index of the value / string
+    Multi = false, -- true / false, allows multiple choices to be selected
+    Text = 'Select Clan',
+    Callback = function(v)
+        local localplayer = game:GetService("Players").LocalPlayer
+        local clanValue = v
+        game:GetService("ReplicatedStorage").Player_Data[localplayer.Name].Clan.Value = clanValue
+    end
+})
 Misc:CreateToggle({
     Name = "Auto Buy EXP on dead",
     CurrentValue = false,

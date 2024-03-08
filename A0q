@@ -1,1 +1,35 @@
 
+getgenv().Hi = true
+spawn(function()
+while Hi == true do
+
+local args = {
+    [1] = false,
+    [2] = Vector3.new(6262.3515625, -4938.2958984375, -235.1484375),
+    [3] = CFrame.new(6262.3515625, -4938.2958984375, -235.1484375, 0.34605860710144043, 0.49619215726852417, -0.7962643504142761, -1.4901161193847656e-08, 0.8487032651901245, 0.5288694500923157, 0.9382129311561584, -0.18301981687545776, 0.29370105266571045),
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("FlamingBreakdanceRemote"):FireServer(unpack(args))
+
+local args = {
+    [1] = false,
+    [2] = Vector3.new(3445.93701171875, -4706.2744140625, 9608.4541015625),
+    [3] = CFrame.new(3445.93701171875, -4706.2744140625, 9608.4541015625, -0.8019652366638184, 0.3020695745944977, -0.5153695344924927, 1.4901161193847656e-08, 0.8627298474311829, 0.5056651830673218, 0.5973707437515259, 0.40552589297294617, -0.6918793320655823),
+    [4] = 1,
+    [5] = Vector3.new(0.5147919654846191, -0.5055479407310486, 0.6923949122428894)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("PyrokanesisRemote"):FireServer(unpack(args))
+
+local args = {
+    [1] = false,
+    [2] = Vector3.new(6776.1455078125, -4026.847900390625, 5666.818359375),
+    [3] = CFrame.new(6776.1455078125, -4026.847900390625, 5666.818359375, -0.32992103695869446, 0.4132120609283447, -0.8487685322761536, -0, 0.8991111516952515, 0.4377206563949585, 0.9440085887908936, 0.14441324770450592, -0.29663562774658203),
+    [4] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("HystericalStrengthRemote"):FireServer(unpack(args))
+wait(0.2)
+end
+end)

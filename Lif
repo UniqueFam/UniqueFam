@@ -1,0 +1,1589 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Legends Re:Written", HidePremium = false, SaveConfig = false, ConfigFolder = "asdsahgjasdhkgjbdsa"})
+
+-------------------------------------------------  Star Players  -------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+---------------------------------------------------------------------------------------------------------------------
+local Tab1 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://12836323838",
+	PremiumOnly = false
+})
+-------------------------------------------
+local Tab2 = Window:MakeTab({
+	Name = "Raid Lv.50",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+})
+-------------------------------------------
+
+local Tab3 = Window:MakeTab({
+	Name = "Raid Lv.60",
+	Icon = "rbxassetid://12836287616",
+	PremiumOnly = false
+})
+
+-------------------------------------------
+
+local Tab4 = Window:MakeTab({
+	Name = "Oter",
+	Icon = "rbxassetid://12836304245",
+	PremiumOnly = false
+})
+--------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+InfJump = false
+Tab1:AddToggle({
+    Name = "InfJump",
+    Default = false,
+    Callback = function(value)
+        InfJump = value
+    end
+})
+
+local function onJumpRequest()
+    if InfJump then
+        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+    end
+end
+
+game:GetService("UserInputService").JumpRequest:connect(onJumpRequest)
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+local DeWarter = true
+Tab1:AddButton({
+    Name = "De Warter",
+    Callback = function(value)
+        if DeWarter then
+        game:GetService("Workspace").WaterTextures:Destroy()
+        end
+    end
+})
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+local Speed = 0
+Tab1:AddTextbox({
+    Name = "Speed",
+    Default = "      ",
+    TextDisappear = true,
+    Callback = function(value)
+        local amount = tonumber(value)
+        if amount and amount > 0 then
+            Speed = amount
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+local RuneArrows = true
+Tab1:AddTextbox({
+    Name = "RuneArrows",
+    Default = "      ",
+    TextDisappear = true,
+    Callback = function(value)
+        local amount = tonumber(value)
+        if amount and amount > 0 and RuneArrows then
+            local ohString1 = "RuneArrows"
+            local ohString2 = "Bows"
+            local ohNumber3 = amount
+            game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1, ohString2, ohNumber3)
+        end
+    end
+})
+
+               
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Players  --------------------------------------------------
+
+
+-------------------------------------------------  Star Rais Lv.50-------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab2:AddSection({
+	Name = "Bow Farm Gigy"
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Raid Gigy Save HP
+local MobName = {"Lahmu","MysticIllusionist"
+}
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Save HP Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"Lahmu","MysticIllusionist"}
+local BowAttack = true
+local Mon = true
+
+Tab2:AddToggle({
+    Name = "No Save Hp Gigy",
+    Default = false,
+    Callback = function(value)
+        Mon = value
+        if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+             while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab2:AddSection({
+	Name = "Bow Farm Boss"
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Ronin Level:110 : Level:120
+local MobName = {"DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Save HP Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "No Save Hp Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+local Section = Tab2:AddSection({
+	Name = "Zaphkiel Farm Gigy"
+})
+------------------------------------------------------------------------------------------------------------------------------------
+
+---Raid Gigy Save HP
+local MobName = {"Lahmu","MysticIllusionist"
+}
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Save HP Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"Lahmu","MysticIllusionist"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "No Save Hp  Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,-25,0)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab2:AddSection({
+	Name = "Zaphkiel Farm Boss"
+})
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Ronin Level:110 : Level:120
+local MobName = {"DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Save HP Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+local MobName = {"DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "No Save Hp Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+    
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,-25,0)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab2:AddSection({
+	Name = "Zaphkiel Farm All"
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+---Save Hp All Mob
+local MobName = {"Lahmu","MysticIllusionist","DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "Save Hp All Mob",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+            
+                        local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp All Mob
+local MobName = {"Lahmu","MysticIllusionist","DesertSnake","Enkidu","Gilgamesh"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab2:AddToggle({
+        Name = "No Save Hp All Mob",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,-25,0)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Raid Lv.50 -----------------------------------------------------------
+
+
+
+-------------------------------------------------  Star Rais Lv.60-------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab3:AddSection({
+	Name = "Bow Farm Gigy"
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Save HP Gigy
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Save HP Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp Gigy
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "No Save Hp Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab3:AddSection({
+	Name = "Bow Farm Boss"
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Save HP Boss
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Save HP Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp Boss
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "No Save Hp Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp All Mob
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1","IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "No Save Hp All Mob",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local bow = game.Players.LocalPlayer.Character.Bow
+                        local swordScript = bow:FindFirstChild("SwordScript")
+                        if swordScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            swordScript.Shoot:FireServer(targetPos, 21)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,6)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+local Section = Tab3:AddSection({
+	Name = "Zaphkiel Farm Gigy"
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Save HP Gigy
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Save HP Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp Gigy
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1"
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "No Save Hp Gigy",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,-25,0)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab3:AddSection({
+	Name = "Zaphkiel Farm Boss"
+})
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Save HP Boss
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Save HP Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp Boss
+local MobName = {"IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "No Save Hp Boss",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+        local tweenService = game:GetService("TweenService")
+        local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+        local tweenServiceClose = game:GetService("TweenService")
+        local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+        local player = game:GetService("Players").LocalPlayer
+        local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,-25,0)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+local Section = Tab3:AddSection({
+	Name = "Zaphkiel Farm All"
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+---Save Hp All Mob
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1","IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "Save Hp All Mob",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+            
+                        local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+        end
+    end
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+---No Save Hp All Mob
+local MobName = {"MarineBoat","MarineGun","MarineBazooka","MarineSword","Cannon1","IceAdmiral","MagmaAdmiral","LightAdmiral","Blackbeard",
+    }
+local BowAttack = true
+local Mon = true
+
+    Tab3:AddToggle({
+        Name = "No Save Hp All Mob",
+        Default = false,
+        Callback = function(value)
+            Mon = value
+            if Mon then
+
+            local tweenService = game:GetService("TweenService")
+            local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+            local tweenServiceClose = game:GetService("TweenService")
+            local tweenInfoClose = TweenInfo.new(0.7, Enum.EasingStyle.Linear)
+            local player = game:GetService("Players").LocalPlayer
+            local char = player.Character
+
+            local function getClosestMob()
+                local closestDist = math.huge
+                local closestMob = nil
+
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        local dist = (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude 
+                        if dist < closestDist then
+                            closestDist = dist
+                            closestMob = v
+                        end
+                    end
+                end
+                return closestMob
+            end
+
+            spawn(function()
+                while Mon do
+                    local closestMob = getClosestMob()
+                    if closestMob then
+                        local zaphkiel = game.Players.LocalPlayer.Character.Zaphkiel
+                        local ServerScript = zaphkiel:FindFirstChild("ServerScript")
+                        if ServerScript then
+                            local targetPos = closestMob.HumanoidRootPart.Position 
+                            ServerScript.Create:FireServer(targetPos, 300)
+                        end
+                    end
+                    wait()
+                end
+            end)
+
+            while Mon do
+                for i,v in pairs(game.workspace.Mobs:GetChildren()) do
+                    if table.find(MobName, v.Name) and v:FindFirstChild("HumanoidRootPart") and v.Health.Value > 0 then
+                        tweenServiceClose:Create(player.Character.HumanoidRootPart, tweenInfoClose, {CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,-25,0)}):Play()
+                    wait(1.7)
+                    end
+                end
+                wait()
+            end
+        end
+    end
+})
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Raid Lv.60 -----------------------------------------------------------
+
+
+-------------------------------------------------  Star Oter  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------
+------
+-----
+----
+---
+--
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+AntiAFK = false
+
+Tab4:AddToggle({
+    Name = "Anti AFK",
+    Default = false,
+        Callback = function(value)
+        AntiAFK = value
+        if AntiAFK then
+            wait(3)
+            local VirtualUser=game:service'VirtualUser'
+            game:service('Players').LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+            end)
+            end
+        end
+})
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---Off Shake Camera
+local OffShake = true
+Tab4:AddToggle({
+    Name = "Off Shake Camera",
+    Default = false,
+    Callback = function(value)
+        if OffShake then
+            game:GetService("UserInputService").WindowFocused:connect(function()
+                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Fixed}):Play()
+            end)
+        else
+            game:GetService("UserInputService").WindowFocused:connect(function()
+                game:GetService("TweenService"):Create(game:GetService("Workspace").Camera, TweenInfo.new(0.1), {CameraType = Enum.CameraType.Custom}):Play()
+            end)
+        end
+    end
+})
+
+------------------------------------------------------------------------------------------------------------------
+
+local Rejoin = false
+Tab4:AddButton({
+    Name = "Rejoin",
+    Callback = function(value)
+        if Rejoin then
+            local tpservice = game:GetService("TeleportService")
+            local plr = game.Players.LocalPlayer
+            tpservice:Teleport(game.PlaceId, plr)
+        end
+    end
+})
+------------------------------------------------------------------------------------------------------------------
+local Shutdown = true
+Tab4:AddButton({
+    Name = "Shutdown",
+    Callback = function(value)
+        if Shutdown then
+            game:Shutdown()
+        end
+    end
+})
+
+
+
+
+--
+---
+----
+-----
+------
+-------
+--------
+-------------------------------------------------  End Oter  ----------------------------------------------------
+OrionLib:Init()

@@ -6,7 +6,7 @@ repeat wait() until game:IsLoaded()
     game:GetService("ReplicatedStorage").Change_Slot:InvokeServer(1)
 
     function redeem()
-        local a = {"35KLIKES", "SORRYFORSHUTDOWN", "RELEASE", "EXPLOITFIXES", "SHUTDOWNSPINS", "EXCUSETHESHUTDOWN", "40KLIKES", "50KLIKES", "10MVISITS", "SORRYFORPINGS"}
+        local a = {"TestOrbCode", "BlackButlerPublicSchoolArc", "FirstBalanceChange", "UPDATE2MoreRaceReset", "UPDATE2MoreRerolls2", "UPDATE2MoreRerolls", "AgainSorryForShutdown", "QuincyFixes", "RaceResetPotionFixAgain", "150kLikes", "CrispyReasonForBugs", "USECODESINMAINMENU", "ChangesAgainSorryForShutdown", "SpinConfirmation", "GoodbyeExcalibur", "SorryForCarelessPotionReset", "NewRankedWeapons"}
 
         for _, itemName in pairs(a) do
             game:GetService("ReplicatedStorage").Code:InvokeServer(itemName)

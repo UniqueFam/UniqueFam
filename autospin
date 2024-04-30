@@ -1,6 +1,6 @@
 repeat wait() until game:IsLoaded()
-    wait(2)
-    local clans = {"Uryu", "Yamamoto", "Urahara", "Kurosaki"}
+    wait()
+    local clans = {"Yhwach", "Gojo", "Ichibei", ""}
     local url = "webhook"
 
     game:GetService("ReplicatedStorage").Change_Slot:InvokeServer(1)

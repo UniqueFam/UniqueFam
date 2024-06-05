@@ -1,0 +1,164 @@
+getgenv().A = true
+spawn(function()
+while A == true do
+local args = {
+   [1] = "Support Style",
+   [2] = "R",
+   [3] = CFrame.new(1838.6805419921875, -57.45828628540039, -760.43603515625, -0.9560734033584595, -0.16241978108882904, 0.24401535093784332, 4.969465727810984e-09, 0.8324549198150635, 0.5540927648544312, -0.2931274175643921, 0.5297533273696899, -0.7958880066871643),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args)
+ 
+local args = {
+   [1] = "Support Style",
+   [2] = "E",
+   [3] = CFrame.new(1837.6273193359375, -57.458290100097656, -755.774658203125, -0.9606558084487915, -0.12899500131607056, 0.24596910178661346, 3.227306422104448e-09, 0.8856035470962524, 0.4644421637058258, -0.27774178981781006, 0.44616904854774475, -0.8507601022720337),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Support Style",
+   [2] = "Q",
+   [3] = CFrame.new(1841.2127685546875, -57.458290100097656, -757.533935546875, -0.9911311864852905, -0.0674467533826828, 0.11449901759624481, 3.443244800394041e-09, 0.8616237044334412, 0.5075477361679077, -0.13288751244544983, 0.5030463933944702, -0.8539820313453674),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Support Style",
+   [2] = "MouseButton1",
+   [3] = CFrame.new(1844.0360107421875, -57.458290100097656, -758.6056518554688, -0.9999613165855408, 0.004678081721067429, -0.007446145173162222, 5.298675942455588e-10, 0.8467571139335632, 0.5319797992706299, 0.008793720044195652, 0.5319592356681824, -0.8467243909835815),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+   [1] = "Fighting Style",
+   [2] = "E",
+   [3] = CFrame.new(1830.515625, -57.458290100097656, -783.9304809570312, 0.003520132740959525, -0.46689337491989136, 0.8843066692352295, -2.9606556789518734e-11, 0.8843121528625488, 0.46689626574516296, -0.9999938011169434, -0.0016435368452221155, 0.0031128961127251387),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Fighting Style",
+   [2] = "Q",
+   [3] = CFrame.new(1832.3096923828125, -57.45828628540039, -781.515869140625, -0.11299166828393936, -0.4923093318939209, 0.8630553483963013, -4.874233655582927e-11, 0.8686180710792542, 0.4954824149608612, -0.9935959577560425, 0.055985383689403534, -0.09814660251140594),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Fighting Style",
+   [2] = "MouseButton1",
+   [3] = CFrame.new(1836.2623291015625, -57.458290100097656, -778.542236328125, -0.3049496114253998, -0.5339601635932922, 0.7886015772819519, 1.337216204433389e-08, 0.8280425071716309, 0.560665488243103, -0.9523685574531555, 0.1709747314453125, -0.252511203289032),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Fighting Style",
+   [2] = "Y",
+   [3] = CFrame.new(1775.2303466796875, -57.45828628540039, -777.9777221679688, 0.2928083539009094, -0.37463369965553284, 0.8797231912612915, -5.550184312141937e-09, 0.9200478792190552, 0.39180609583854675, -0.9561711549758911, -0.11472410708665848, 0.26939767599105835),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Fighting Style",
+   [2] = "F",
+   [3] = CFrame.new(1789.28662109375, -57.45829391479492, -776.620361328125, 0.47760409116744995, -0.5628929734230042, 0.6745709776878357, 2.236561158497352e-09, 0.7678011655807495, 0.6406883597373962, -0.8785752654075623, -0.305995374917984, 0.36670491099357605),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Fighting Style",
+   [2] = "R",
+   [3] = CFrame.new(1786.9517822265625, -57.22821807861328, -777.1298217773438, 0.4415935277938843, -0.5161272287368774, 0.7338991165161133, 1.8718576910714546e-08, 0.8179744482040405, 0.5752546191215515, -0.8972153067588806, -0.25402870774269104, 0.3612121641635895),
+   [4] = workspace:WaitForChild("Debris"):WaitForChild("Part"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Sword Style",
+   [2] = "E",
+   [3] = CFrame.new(1738.880126953125, -57.45829391479492, -783.8538818359375, 0.5518091917037964, -0.4474845826625824, 0.7037501335144043, -7.665241774645892e-09, 0.8438550233840942, 0.5365713238716125, -0.8339703679084778, -0.296085000038147, 0.46564698219299316),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Sword Style",
+   [2] = "Q",
+   [3] = CFrame.new(1738.705810546875, -57.458282470703125, -780.6361694335938, 0.4333982765674591, -0.5070770978927612, 0.7450093030929565, 2.278456756599212e-09, 0.8266837000846863, 0.5626671314239502, -0.9012026190757751, -0.2438589632511139, 0.3582831919193268),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Sword Style",
+   [2] = "MouseButton1",
+   [3] = CFrame.new(1739.6033935546875, -57.458290100097656, -776.9998779296875, 0.28574338555336, -0.580222487449646, 0.7626878619194031, -1.8437658511061272e-08, 0.795870840549469, 0.6054666638374329, -0.9583062529563904, -0.17300811409950256, 0.22741477191448212),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Sword Style",
+   [2] = "Y",
+   [3] = CFrame.new(1734.26806640625, -57.45828628540039, -781.9736328125, 0.40739506483078003, -0.4437217116355896, 0.7982107400894165, 1.2123143378062196e-08, 0.8740312457084656, 0.4858698844909668, -0.9132521152496338, -0.19794097542762756, 0.3560759723186493),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Sword Style",
+   [2] = "F",
+   [3] = CFrame.new(1745.6612548828125, -57.45828628540039, -780.5982666015625, 0.6095757484436035, -0.5494340062141418, 0.5714367032051086, -1.733909194001626e-08, 0.720848560333252, 0.6930928230285645, -0.7927278876304626, -0.4224925637245178, 0.4394117295742035),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+ 
+local args = {
+   [1] = "Sword Style",
+   [2] = "R",
+   [3] = CFrame.new(1742.92578125, -57.458282470703125, -781.8529052734375, 0.5784637331962585, -0.5091234445571899, 0.6373171210289001, -1.7368719795740617e-09, 0.7813054323196411, 0.6241490244865417, -0.8157081604003906, -0.36104756593704224, 0.4519568085670471),
+   [4] = workspace:WaitForChild("Map"):WaitForChild("Islands"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Dawn Island V3"):WaitForChild("Model"):WaitForChild("Meshes/daniland.2"),
+   [5] = 5
+}
+ 
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+wait()
+end
+end)

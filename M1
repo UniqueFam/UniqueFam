@@ -1,0 +1,114 @@
+getgenv().A = true
+spawn(function()
+while A == true do 
+local args = {
+    [1] = "Fighting Style",
+    [2] = "Y",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Fighting Style",
+    [2] = "F",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Fighting Style",
+    [2] = "R",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Fighting Style",
+    [2] = "E",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Fighting Style",
+    [2] = "Q",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Support Style",
+    [2] = "MouseButton1",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Fighting Style",
+    [2] = "MouseButton1",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Sword Style",
+    [2] = "MouseButton1",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Sword Style",
+    [2] = "Q",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Sword Style",
+    [2] = "E",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Sword Style",
+    [2] = "R",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Sword Style",
+    [2] = "Y",
+    [3] = CFrame.new(22674.486328125, 723.5258178710938, 1363.83935546875, 0.998827338218689, -0.01806568168103695, 0.04491843655705452, 1.297665419563998e-09, 0.9277749061584473, 0.3731403946876526, -0.04841523617506027, -0.37270283699035645, 0.9266868829727173),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+wait()
+end
+end)

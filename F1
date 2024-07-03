@@ -1,0 +1,106 @@
+getgenv().A = true
+spawn(function()
+while A == true do
+local args = {
+    [1] = "Sword Style",
+    [2] = "MouseButton1",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Sword Style",
+    [2] = "E",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Sword Style",
+    [2] = "F",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Sword Style",
+    [2] = "U",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Fighting Style",
+    [2] = "MouseButton1",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Support Style",
+    [2] = "MouseButton1",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Support Style",
+    [2] = "Q",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Support Style",
+    [2] = "E",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+local args = {
+    [1] = "Support Style",
+    [2] = "G",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Sword Style",
+    [2] = "T",
+    [3] = CFrame.new(9449.3291015625, 47.121681213378906, 1382.3194580078125, 0.9944661855697632, -0.060432519763708115, 0.08593613654375076, -5.395239810468411e-10, 0.8179903626441956, 0.5752319693565369, -0.10505764931440353, -0.5720487236976624, 0.8134636878967285),
+    [4] = workspace:WaitForChild("Map"),
+    [5] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("requestAbility"):FireServer(unpack(args))
+
+wait()
+end
+end)
